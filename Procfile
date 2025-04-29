@@ -1,1 +1,1 @@
-web: gunicorn doglawireland.wsgi
+web: gunicorn doglawireland.wsgi --log-file -
