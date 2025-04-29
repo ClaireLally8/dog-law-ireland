@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mt-5 text-center">About Us</h1>
+    <div class="d-flex justify-content-center">
+        <img class="img-fluid" src="{% static 'imgs/group-photo.png' %}">
+    </div>
+    <div>
+        <p class="text-center">In August 2024, solicitors Hannah Unger, Demi Mullen, and Carrie McMeel founded Dog Law
+            Ireland (or DLÍ, which is
+            also the Irish word for “Law”).</p>
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-lg-6 col-sm-12">
+            <h3 class="my-3">Our Purpose</h3>
+            <p>We came together at a pivotal point in Ireland’s dog control landscape - shortly after the announcement
+                of Ireland’s
+                plan to have its first banned type of dog. It was at that time that something we’d all long been aware
+                of was
+                highlighted to us once again - very few people actually understand the laws relating to dogs in
+                Ireland. 
+                We believe that education and enforcement are key to improving life for dogs… &amp; it is with this in
+                mind that we
+                formed Dog Law Ireland. Our journey began with a simple yet powerful idea: to educate people, to
+                advocate for better
+                laws and to push for greater enforcement. </p>
+            <p>We cannot change what we don’t understand... so we want to make dog law accessible and easily understood
+                by everyone - the general public, animal rescues, An Garda Siochana, the Government, the veterinarian
+                community,
+                the legal profession &amp; all those working in the canine industry. </p>
+            <p>While we are small in number, we are determined to make a change. We are also very fortunate to have
+                developed
+                so many wonderful relationships with those who have been at the forefront of advocating for Ireland’s
+                dogs long
+                before Dog Law Ireland became Dog Law Ireland. </p>
+            <p>We also have some wonderful people volunteering their time to help us &amp; we are always open to hearing
+                from people
+                who would like to help (in particular legal researchers!) so please do get in touch if you would like to
+                get involved.
+            </p>
+        </div>
+        <div class="col-md-6 col-lg-6 col-sm-12">
+            <img class="img-fluid" src="{% static 'imgs/group-photo.png' %}">
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <h3>Meet the DLI Team</h3>
+        <div class="col-lg-4 col-md-4 col-sm-12">
+            <div class="my-4 d-flex justify-content-center">
+                <img class="img-fluid rounded" style="max-height: 250px;" src="{% static 'imgs/hannah-unger.jpeg' %}">
+            </div>
+            <h5 class="mb-3">Hannah Unger</h5>
+            <p>6 years qualified, public and regulatory law solicitor at Fieldfisher LLP. Hannah manages a pro bono team in
+                Fieldfisher specifically relating to reviewing dog laws and setting out proposed reforms. In May 2024, Hannah
+                published a paper on “Key Reforms to Dog Breeding” and presented her report in the AV Room of the Oireachtas.
+                Hannah also advises dog rescues and dog shelters in relation to legal issues as they arise for them and Control of
+                Dogs Act 1986. Hannah has also assisted drafting their policies and procedures. Hannah fosters dogs and adopted
+                the gorgeous Twinkle from Dogs Angels in August 2023.</p>
+
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12">
+            <div class=" my-4 d-flex justify-content-center"><img class="img-fluid rounded" style="max-height: 250px;" src="{% static 'imgs/demi-mullen.jpeg' %}"></div>
+            
+            <h5 class="mb-3">Demi Mullen</h5>
+            <p>6 years qualified, investment funds solicitor. Demi co-established the Animal Law Network Ireland along with a
+                colleague in 2024 - a group for legal professionals and academics with an interest in animal law in Ireland. <br>Demi has
+                presented on dog law in Ireland at the UK Centre for Animal Law Conference and Causeway Coast Dog Rescue’s
+                Companion Animal Welfare Conference. Demi adopted her gorgeous furbaby Klaus from Cara Rescue in February
+                2019.</p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12">
+            <div class=" my-4 d-flex justify-content-center">
+                <img class="img-fluid rounded" style="max-height: 250px;" src="{% static 'imgs/carrie-mcmeel.jpeg' %}">
+        </div>
+            <h5 class="mb-3">Carrie McMeel</h5>
+            <p>5 years qualified, commercial, data protection and regulatory solicitor. Carrie regularly advises dog rescues in relation
+                to legal issues as they arise for them. She has also extensively advised and drafted policies, agreements and
+                procedures for dog rescues. <br>Carrie gives countless hours of volunteering at her local rescue, Dogs Aid and is the
+                proud owner of her two gorgeous rescue dogs; Dots (Collon) &amp; Zag (Dogs Aid).</p>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
