@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 my-3">
+            <h1 class="m-5"> Dog Law Ireland</h1>
+            <p>We believe that education and enforcement are key to improving life for dogs. <br>It is with this in mind that we formed Dog Law Ireland. Our journey began with a simple yet powerful idea: to educate people, to advocate for better laws and to push for greater enforcement.</p>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 my-5">
+            <img src="{% static 'imgs/landing-template.webp' %}" class="img-fluid">
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row d-flex justify-content-around">
+        <div class="col-sm-12 col-md-4 col-lg-4 z-depth-1 py-5 px-5">
+            <a href="#">
+                <div class="d-flex justify-content-center">
+                    <img class="icon" src="{% static 'imgs/about.svg' %}"></div>
+                    <div class="d-flex justify-content-center">
+                        <h5>About Us</h5></div></a>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4 z-depth-1 py-5 px-5">
+            <a href="#">
+                <div class="d-flex justify-content-center">
+                    <img class="icon" src="{% static 'imgs/fundraising.svg' %}"></div>
+                    <div class="d-flex justify-content-center">
+                        <h5>Fundraising</h5></div></a>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4 z-depth-1 py-5 px-5">
+            <a href="#">
+                <div class="d-flex justify-content-center">
+                    <img class='icon' src="{% static 'imgs/resources.svg' %}"></div>
+                    <div class="d-flex justify-content-center">
+                        <h5>Resources</h5></div></a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
