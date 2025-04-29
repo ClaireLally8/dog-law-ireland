@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'American Typewriter';
+  src: url('../fonts/american-typewriter-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Helvetica';
+  src: url('../fonts/Helvetica.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Helvetica Light';
+  src: url('../fonts/helvetica-light-587ebe5a59211.ttf') format('truetype');
+  font-weight: lighter;
+  font-style: normal;
+}
+* {
+  box-sizing: inherit;
+  color: black;
+  background-color: #d2c2b2;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+h1 {
+  font-family:'American Typewriter';
+}
+p {
+  font-family: 'Helvetica';
+}
+h5{
+  font-family: 'American Typewriter';
+}
+.icon {
+  height:150px;
+  width: 150px;
+}
+a :hover {
+  text-decoration: underline;
+}
