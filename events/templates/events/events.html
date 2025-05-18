@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+{% for e in events_teasers %}
+{{ e.teaser }}
+{% endfor %}
+{% endblock %}
