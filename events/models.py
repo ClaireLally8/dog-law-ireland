@@ -6,8 +6,7 @@ import os
 class Event(models.Model):
     name = models.CharField(max_length=255)
     slug = models.SlugField(unique=True, blank=True)
-    #file = models.FileField(upload_to='events/files/', blank=True, null=True)
-    #image = models.ImageField(upload_to='events/images/', blank=True, null=True)
+    tagline = models.TextField(blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     uploaded_at = models.DateTimeField(auto_now_add=True)
 

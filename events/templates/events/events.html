@@ -2,7 +2,17 @@
 {% load static %}
 
 {% block content %}
-{% for e in events_teasers %}
-{{ e.teaser }}
+{% for e in events %}
+<div class="card" style="width: 18rem;">
+   {% if e.images.all %} 
+    <img src={{ e.images.all.0.image.url }} class="card-img-top" alt="...">
+    {% endif %}
+    <div class="card-body">
+      <h5 class="card-title">{{ e.name }}
+      </h5>
+      <p class="card-text">{{ e.tagline }}</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
 {% endfor %}
 {% endblock %}
