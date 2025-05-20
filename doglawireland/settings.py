@@ -45,10 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'cloudinary',
-    'cloudinary_storage', 
-    'storages',
     'django.contrib.staticfiles',
+    'storages',
  
     'main',
     'about',
@@ -140,30 +138,48 @@ STATICFILES_DIRS = [
 ]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-#if DEBUG: 
-   # MEDIA_URL = '/media/'
-    #MEDIA_ROOT = BASE_DIR / 'media'
-#else: 
-   # AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')  # Set these in your env variables
-   # AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-   # AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
-   # AWS_S3_REGION_NAME = 'eu-west-1'  # Your bucket region
-   # AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.{AWS_S3_REGION_NAME}.amazonaws.com'
-   # DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-   # MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/'
-
-CLOUDINARY_STORAGE = {
-        'CLOUD_NAME': os.getenv('CLOUD_NAME'),
-        'API_KEY': os.getenv('API_KEY'),
-        'API_SECRET': os.getenv('API_SECRET'),
-    } 
-
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-MEDIA_URL = f"https://res.cloudinary.com/{os.getenv('CLOUD_NAME')}/"
-
-
-
+if DEBUG: 
+    MEDIA_URL = '/media/'
+    MEDIA_ROOT = BASE_DIR / 'media'
+else: 
+   AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')  # Set these in your env variables
+   AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+   AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
+   AWS_S3_REGION_NAME = 'eu-west-1'  # Your bucket region
+   AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.{AWS_S3_REGION_NAME}.amazonaws.com'
+   DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+   MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/'
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'upload_debug.log'),
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'file'],
+            'level': 'DEBUG',
+        },
+        'cloudinary': {
+            'handlers': ['console', 'file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'django.request': {
+            'handlers': ['console', 'file'],
+            'level': 'ERROR',
+            'propagate': False,
+        },
+    },
+}

@@ -3,6 +3,8 @@ from django.utils.text import slugify
 from django.core.exceptions import ValidationError
 import os
 
+
+
 class Event(models.Model):
     name = models.CharField(max_length=255)
     slug = models.SlugField(unique=True, blank=True)
@@ -25,4 +27,4 @@ class Event(models.Model):
 
 class EventImage(models.Model):
     event = models.ForeignKey(Event, related_name='images', on_delete=models.CASCADE)
-    image = models.ImageField()
+    image = models.ImageField(upload_to='uploads/')
