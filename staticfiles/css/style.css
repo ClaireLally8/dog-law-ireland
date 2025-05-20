@@ -38,9 +38,15 @@ body {
 h1, h2, h3, h4, h5 {
   font-family:'American Typewriter';
   color: black !important;
+  text-transform: capitalize;
 }
-.card-title {
-  color: black;
+a {
+  font-family:'American Typewriter';
+  color: black !important;
+  font-weight: bold;
+}
+a:hover {
+  text-decoration: underline;
 }
 p {
   font-family: 'Helvetica';
@@ -49,6 +55,20 @@ p {
   height:150px;
   width: 150px;
 }
-a :hover {
-  text-decoration: underline;
+a {
+  text-decoration: none;
+}
+
+.card {
+  border:none;
+  box-shadow: none;
+}
+.card-img-top {
+  border-radius: 15px;
+}
+.card-title {
+  text-transform: capitalize;
+}
+.featured {
+  max-width: 40vw;
 }
