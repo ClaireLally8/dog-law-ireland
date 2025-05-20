@@ -35,12 +35,9 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, a {
   font-family:'American Typewriter';
   color: black !important;
-}
-.card-title {
-  color: black;
 }
 p {
   font-family: 'Helvetica';
@@ -49,6 +46,22 @@ p {
   height:150px;
   width: 150px;
 }
-a :hover {
+a {
+  text-decoration: none;
+}
+a:hover {
   text-decoration: underline;
+}
+.card {
+  border:none;
+  box-shadow: none;
+}
+.card-img-top {
+  border-radius: 15px;
+}
+.card-title {
+  text-transform: capitalize;
+}
+.featured {
+  max-width: 40vw;
 }
