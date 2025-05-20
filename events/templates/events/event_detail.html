@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<h1 class="my-5 text-center">{{event.name}}</h1>
+<div class="container my-5 d-flex justify-content-center">
+    <div class="row">
+        <div class="col-md-6 col-lg-6 col-sm-12">
+            <img class="img-fluid" src="{{ event.images.all.0.image.url }}">
+        </div>
+        <div class="col-md-6 col-lg-6 col-sm-12 d-flex align-items-center">
+            {{ event.description }}
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock %}
