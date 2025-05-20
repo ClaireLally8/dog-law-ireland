@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'main',
     'about',
     'events',
+    'resources',
     ]
 
 MIDDLEWARE = [
