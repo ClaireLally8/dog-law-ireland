@@ -32,6 +32,10 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 DEBUG = False
 
 ALLOWED_HOSTS = ['"https://web-production-eff60.up.railway.app','*',]
+CSRF_TRUSTED_ORIGINS = [
+    "https://web-production-eff60.up.railway.app",
+]
+
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 
