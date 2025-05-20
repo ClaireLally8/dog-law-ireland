@@ -4,8 +4,8 @@ from django.core.exceptions import ValidationError
 class Resource(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField(blank=True, null=True)
-    file = models.FileField(upload_to='resource_files/', blank=True, null=True)
-    image = models.ImageField(upload_to='resources_images/', blank=True, null=True)
+    file = models.FileField(blank=True, null=True)
+    image = models.ImageField(blank=True, null=True)
     uploaded_at = models.DateTimeField(auto_now_add=True)
 
     def clean(self):

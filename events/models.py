@@ -25,4 +25,4 @@ class Event(models.Model):
 
 class EventImage(models.Model):
     event = models.ForeignKey(Event, related_name='images', on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='event_images/')
+    image = models.ImageField()
