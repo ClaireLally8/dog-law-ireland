@@ -2,17 +2,27 @@
 {% load static %}
 
 {% block content %}
-{% for e in events %}
-<div class="card" style="width: 18rem;">
-   {% if e.images.all %} 
-    <img src={{ e.images.all.0.image.url }} class="card-img-top" alt="...">
+<h1 class="my-5 text-center"> Fundraising Events</h1>
+<div class="container my-5">
+        {% if featured %}
+    <img src= {{ featured.images.all.0.image.url }} class="img-fluid rounded" alt="...">
     {% endif %}
-    <div class="card-body">
-      <h5 class="card-title">{{ e.name }}
-      </h5>
-      <p class="card-text">{{ e.tagline }}</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
-  </div>
-{% endfor %}
+<div class="row mx-2">
+    {% for e in events %}
+    <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-5">
+        <div class="card" style="width: 18rem;">
+            {% if e.images.all %} 
+             <img src= {{ e.images.all.0.image.url }} class="card-img-top" alt="...">
+             {% endif %}
+             <div class="card-body">
+               <h5 class="card-title">{{ e.name }}
+               </h5>
+               <p class="card-text">{{ e.tagline }}</p>
+             </div>
+           </div>
+         
+    </div>
+    {% endfor %}
+</div>
 {% endblock %}

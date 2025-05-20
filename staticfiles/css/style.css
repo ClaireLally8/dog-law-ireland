@@ -35,14 +35,15 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
-h1 {
+h1, h2, h3, h4, h5 {
   font-family:'American Typewriter';
+  color: black !important;
+}
+.card-title {
+  color: black;
 }
 p {
   font-family: 'Helvetica';
-}
-h5{
-  font-family: 'American Typewriter';
 }
 .icon {
   height:150px;

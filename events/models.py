@@ -9,10 +9,13 @@ class Event(models.Model):
     tagline = models.TextField(blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     uploaded_at = models.DateTimeField(auto_now_add=True)
+    featured = models.BooleanField(default=False)
 
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.name)
+        if self.featured:
+            Event.objects.exclude(pk=self.pk).update(featured=False)
         self.full_clean()  # call clean() method before saving
         super().save(*args, **kwargs)
 
