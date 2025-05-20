@@ -35,10 +35,18 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
-h1, h2, h3, h4, h5, a {
+h1, h2, h3, h4, h5 {
   font-family:'American Typewriter';
   color: black !important;
   text-transform: capitalize;
+}
+a {
+  font-family:'American Typewriter';
+  color: black !important;
+  font-weight: bold;
+}
+a:hover {
+  text-decoration: underline;
 }
 p {
   font-family: 'Helvetica';
@@ -50,9 +58,7 @@ p {
 a {
   text-decoration: none;
 }
-a:hover {
-  text-decoration: underline;
-}
+
 .card {
   border:none;
   box-shadow: none;
