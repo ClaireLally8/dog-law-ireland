@@ -51,4 +51,42 @@
         {% endfor %}
     </div>
 </div>
+<div class="container">
+    <h3 class="my-5">Our Accomplishments</h3>
+    <div class="col-md-6 col-lg-6 col-sm-12 mb-5">
+        <p>One of our proudest accomplishments to date has been providing support to the legal team who took a judicial review
+            against the XL Bully Regulations. As a result of this challenge, the law is going to be made clearer and will ensure
+            better safeguards for owners and dogs. <br><br>To read more about our accomplishments and view some of the files mentioned below, please visit our resources page</p><a href="{% url 'resources' %}">Check it out here!</a>
+    </div>
+</div>
+<div class="container">
+    <div class="row d-flex justify-content-around">
+        <div class="col-sm-12 col-md-6 col-lg-3 z-depth-1 py-5 px-5">
+                <div class="d-flex justify-content-center">
+                    <img class="icon-about" src="{% static 'imgs/bully.svg' %}" style="max-height: 150px;"></div>
+                    <div class="d-flex justify-content-center">
+                        <p>Submitted open letters to the Minister for Rural and Community Development in relation to the XL Bully
+                            Regulations</p></div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 z-depth-1 py-5 px-5">
+                <div class="d-flex justify-content-center">
+                    <img class="icon-about" src="{% static 'imgs/pledge.svg' %}" style="max-height: 150px;"></div>
+                    <div class="d-flex justify-content-center">
+                        <p>Prepared a “Pawsitive Pledge” for general election candidates to sign</div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 z-depth-1 py-5 px-5">
+                <div class="d-flex justify-content-center">
+                    <img class='icon-about' src="{% static 'imgs/save.svg' %}" style="max-height: 150px;"></div>
+                    <div class="d-flex justify-content-center">
+                        <p>Met with a number of dog loving politicians to discuss plans to prepare private members bills</p></div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 z-depth-1 py-5 px-5">
+                <div class="d-flex justify-content-center">
+                    <img class='icon-about' src="{% static 'imgs/info.svg' %}" style="max-height: 150px;"></div>
+                    <div class="d-flex justify-content-center">
+                    <p>Submitted countless freedom of information requests, parliamentary questions; and much much more.</p></div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}

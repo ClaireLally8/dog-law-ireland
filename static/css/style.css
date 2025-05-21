@@ -85,3 +85,6 @@ a {
 .featured {
   max-width: 40vw;
 }
+.icon-about {
+  max-width: 300px;
+}
