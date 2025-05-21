@@ -33,6 +33,9 @@ nav {
   box-shadow: 0 4px 2px -3px gray;
   background-color: #F3EEEA;
 }
+.bg-body-tertiary {
+  background-color: #F3EEEA!important;
+}
 footer {
   box-shadow: 0 4px 2px -3px gray inset;
   background-color: #F3EEEA;
