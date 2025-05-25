@@ -12,6 +12,7 @@ class Event(models.Model):
     description = models.TextField(blank=True, null=True)
     uploaded_at = models.DateTimeField(auto_now_add=True)
     featured = models.BooleanField(default=False)
+    video = models.URLField(blank=True)
 
     def save(self, *args, **kwargs):
         if not self.slug:
