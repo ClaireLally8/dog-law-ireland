@@ -15,7 +15,9 @@
                <h5 class="card-title my-3">{{ r.name }}
                </h5>
                <p class="card-text">{{ r.description }}</p>
+               {% if r.file %}
                <a href = "{{ r.file.url }}" target="_blank">Read More!</a>
+               {% endif %}
              </div>
            </div>
          
