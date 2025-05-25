@@ -8,6 +8,7 @@ class Resource(models.Model):
     tagline = models.TextField(blank=True, null=True)
     file = models.FileField(blank=True, null=True)
     image = models.ImageField(upload_to='uploads/',blank=True, null=True)
+    video = models.URLField(blank=True)
     uploaded_at = models.DateTimeField(auto_now_add=True)
 
     def clean(self):
