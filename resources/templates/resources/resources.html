@@ -14,7 +14,11 @@
              <div class="card-body">
                <h5 class="card-title my-3">{{ r.name }}
                </h5>
-               <p class="card-text">{{ r.description }}</p>
+               {% if r.tagline %} 
+               <p class="card-text">{{ r.tagline }}</p>
+               {% else %}
+               <p class="card-text">{{r.description|truncatewords:10 }}</p>
+               {% endif %}
                {% if r.file %}
                <a href = "{{ r.file.url }}" target="_blank">Read More!</a>
                {% endif %}
