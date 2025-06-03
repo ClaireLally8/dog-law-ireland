@@ -6,10 +6,26 @@
 <div class="container my-5 d-flex justify-content-center">
     <div class="row">
         <div class="col-md-6 col-lg-6 col-sm-12">
-            <img class="img-fluid" src="{{ event.images.all.0.image.url }}">
+            <div id="featuredEventCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  {% for f in event.images.all %}
+                  <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                    <img src="{{ f.image.url }}" class="d-block w-100 img-fluid rounded shadow-sm" alt="Image for {{ event.name }}" style="object-fit: contain; max-height: 500px;">
+                  </div>
+                  {% endfor %}
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#featuredEventCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#featuredEventCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
         </div>
         <div class="col-md-6 col-lg-6 col-sm-12 d-flex align-items-center">
-            {{ event.description }}
+            {{ event.description|safe  }}
         </div>
     </div>
 </div>

@@ -1,14 +1,17 @@
-from django.shortcuts import render
-
+from django.shortcuts import render,get_object_or_404
+from django.core.paginator import Paginator
 from .models import Resource
 
 def resources(request):
-    resources = Resource.objects.all()
+    resources_qs = Resource.objects.all().order_by('-uploaded_at')
+    paginator = Paginator(resources_qs, 12)
+    page_number = request.GET.get('page') or 1
+    page_obj = paginator.get_page(page_number)
     context = {
-        'resources':resources
+        'resources': page_obj
     }
     return render(request, 'resources/resources.html', context)
 
 def resource_detail(request, slug):
-    resource = get_object_or_404(resource, slug=slug)
-    return render(request, 'resources/resource_detail', {'resource': resource})
+    resource = get_object_or_404(Resource, slug=slug)
+    return render(request, 'resources/resource_detail.html', {'resource': resource})

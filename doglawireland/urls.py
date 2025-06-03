@@ -9,4 +9,5 @@ urlpatterns = [
     path('about/', include('about.urls')),
     path('events/', include('events.urls')),
     path('resources/', include('resources.urls')),
+    path('summernote/', include('django_summernote.urls')),
 ]

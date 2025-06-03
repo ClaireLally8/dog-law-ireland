@@ -12,7 +12,7 @@
         </div>
     </div>
     <div>
-        <p class="text-center">In August 2024, solicitors Hannah Unger, Demi Mullen, and Carrie McMeel founded Dog Law
+        <p class="text-center">In August 2024, solicitors Hannah Unger, Carrie McMeel and Demi Mullen founded Dog Law
             Ireland (or DLÍ, which is also the Irish word for “Law”).</p>
     </div>
 </div>
@@ -53,12 +53,22 @@
 </div>
 <div class="container">
     <h3 class="my-5 text-center">Our Accomplishments</h3>
-    <div class="col-md-6 col-lg-6 col-sm-12 mb-5 offset-lg-3 offset-md-3">
-        <p class="text-center">One of our proudest accomplishments to date has been providing support to the legal team who took a judicial review
-            against the XL Bully Regulations. As a result of this challenge, the law is going to be made clearer and will ensure
-            better safeguards for owners and dogs. <br><br>To read more about our accomplishments and view some of the files mentioned below, please visit our resources page</p><a href="{% url 'resources' %}">Check it out here!</a>
+    <div class="row">
+        <div class="col-md-6 col-lg-6 col-sm-12 mb-5">
+            <img src="{{ xlreview.image.url }}" class="img-thumbnail"style="max-height: 300px;">
+        </div>
+        <div class="col-md-6 col-lg-6 col-sm-12 mb-5 d-flex align-items-center">
+            <div>
+                <p class="text-center">One of our proudest accomplishments to date has been providing support to the legal team who took a judicial review
+                    against the XL Bully Regulations. As a result of this challenge, the law is going to be made clearer and will ensure
+                    better safeguards for owners and dogs.</p>
+                    {% if xlreview.URL %}
+                    <a href="{{ xlreview.URL }}" target="_blank">You can read more about the work done here</a>
+                    {% endif %}
+            </div>
+            </div>
     </div>
-</div>
+    </div>
 <div class="container">
     <div class="row d-flex justify-content-around">
         <div class="col-sm-12 col-md-6 col-lg-3 z-depth-1 py-5 px-5">

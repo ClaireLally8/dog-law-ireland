@@ -1,14 +1,17 @@
 from django.db import models
+from django.utils.text import slugify
 from django.core.exceptions import ValidationError
 
 class Resource(models.Model):
-    slug = models.SlugField(blank=True)
     name = models.CharField(max_length=255)
+    slug = models.SlugField(blank=True)
     description = models.TextField(blank=True, null=True)
     tagline = models.TextField(blank=True, null=True)
     file = models.FileField(blank=True, null=True)
+    file_name = models.CharField(max_length=50, blank=True)
     image = models.ImageField(upload_to='uploads/',blank=True, null=True)
-    video = models.URLField(blank=True)
+    URL = models.URLField(blank=True)
+    url_name = models.CharField(max_length=50, blank=True)
     uploaded_at = models.DateTimeField(auto_now_add=True)
 
     def clean(self):

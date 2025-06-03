@@ -5,9 +5,9 @@
   font-style: normal;
 }
 @font-face {
-  font-family: 'Helvetica';
-  src: url('../fonts/Helvetica.ttf') format('truetype');
-  font-weight: normal;
+  font-family: 'American Typewriter Bold';
+  src: url('../fonts/american-typewriter-bold.ttf') format('truetype');
+  font-weight: bold;
   font-style: normal;
 }
 @font-face {
@@ -23,6 +23,7 @@
 html {
   height: 100%;
   box-sizing: border-box;
+  text-align: center;
 }
 
 body {
@@ -70,7 +71,15 @@ p {
 a {
   text-decoration: none;
 }
-
+.page-link {
+  background-color: #F7F4F1;
+}
+.page-item.disabled .page-link {
+  background-color: #F3EEEA;
+}
+.page-item.active .page-link {
+  background-color: #C6A58B;
+}
 .card {
   border:none;
   box-shadow: none;

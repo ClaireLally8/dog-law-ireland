@@ -1,0 +1,99 @@
+@font-face {
+  font-family: 'American Typewriter';
+  src: url("../fonts/american-typewriter-regular.940ace70d6c7.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'American Typewriter Bold';
+  src: url("../fonts/american-typewriter-bold.e5cb05e81568.ttf") format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Helvetica Light';
+  src: url("../fonts/helvetica-light-587ebe5a59211.9a8c18bd1dbe.ttf") format('truetype');
+  font-weight: lighter;
+  font-style: normal;
+}
+* {
+  box-sizing: inherit;
+  color: black;
+}
+html {
+  height: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+body {
+  height: 100%;
+  background-color:#F7F4F1;
+}
+nav {
+  box-shadow: 0 4px 2px -3px gray;
+  background-color: #F3EEEA;
+}
+.bg-body-tertiary {
+  background-color: #F3EEEA!important;
+}
+footer {
+  box-shadow: 0 4px 2px -3px gray inset;
+  background-color: #F3EEEA;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+}
+h1, h2, h3, h4, h5 {
+  font-family:'American Typewriter';
+  color: black !important;
+  text-transform: capitalize;
+}
+a {
+  font-family:'American Typewriter';
+  color: black !important;
+  font-weight: bold;
+}
+a:hover {
+  text-decoration: underline;
+}
+p {
+  font-family: 'American Typewriter';
+}
+.icon {
+  height:150px;
+  width: 150px;
+}
+a {
+  text-decoration: none;
+}
+.page-link {
+  background-color: #F7F4F1;
+}
+.page-item.disabled .page-link {
+  background-color: #F3EEEA;
+}
+.page-item.active .page-link {
+  background-color: #C6A58B;
+}
+.card {
+  border:none;
+  box-shadow: none;
+  background-color: #F7F4F1;
+}
+.card-img-top {
+  border-radius: 15px;
+}
+.card-title {
+  text-transform: capitalize;
+}
+.featured {
+  max-width: 40vw;
+}
+.icon-about {
+  max-width: 300px;
+}

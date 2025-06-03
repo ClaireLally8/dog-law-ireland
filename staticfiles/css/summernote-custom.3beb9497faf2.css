@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'American Typewriter';
+    src: url("../fonts/american-typewriter-regular.940ace70d6c7.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'American Typewriter';
+    src: url("../fonts/american-typewriter-bold.e5cb05e81568.ttf") format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  .note-editable {
+    font-family: 'American Typewriter', serif !important;
+  }

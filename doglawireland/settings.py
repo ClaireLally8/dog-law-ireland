@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'storages',
+
+    'django_summernote',
  
     'main',
     'about',
@@ -146,7 +148,15 @@ STORAGES = {
         'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
     },
 }
-
+SUMMERNOTE_CONFIG = {
+    'css': (
+        '/static/css/summernote-custom.css',
+    ),
+    'summernote': {
+        'fontNames': ['American Typewriter'],
+        'fontNamesIgnoreCheck': ['American Typewriter'],
+    },
+}
  
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
