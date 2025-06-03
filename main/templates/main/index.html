@@ -55,7 +55,7 @@
     <div class="row d-flex align-items-center">
       <div class="col-md-6">
         <h5 class="mb-3">{{ featured.name }}</h5>
-        <p class="my-3">{{ featured.description }}</p>
+        <p class="my-3">{{ featured.description|safe  }}</p>
       </div>
       <div class="col-md-6">
         <div id="featuredEventCarousel" class="carousel slide" data-bs-ride="carousel">

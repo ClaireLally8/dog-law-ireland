@@ -10,7 +10,7 @@
         </div>
         <div class="col-md-6 col-lg-6 col-sm-12 d-flex align-items-center offset-lg-1 my-4">
             <div>
-                <p>{{ resource.description }}</p>
+                <p>{{ resource.description|safe }}</p>
                 {% if resource.file %}
                 <p>
                 <a href="{{ resource.file.url }}" target="_blank">{% if resource.file_name %} {{resource.file_name}} {%else %} Read More Here! {% endif %}</a>
