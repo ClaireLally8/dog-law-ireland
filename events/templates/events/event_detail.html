@@ -25,7 +25,17 @@
               </div>
         </div>
         <div class="col-md-6 col-lg-6 col-sm-12 d-flex align-items-center">
-            {{ event.description|safe  }}
+          <div>
+            <p>
+              {{ event.description|safe  }} 
+            </p>
+            <p>
+              {% if event.URL %}
+              <a href="{{ event.URL }}" target="_blank">{% if event.url_name %} {{event.url_name}} {% else %} Find out more! {% endif %}</a>
+              {% endif %}
+          </p>
+          </div>
+            
         </div>
     </div>
 </div>

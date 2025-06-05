@@ -5,7 +5,7 @@
   font-style: normal;
 }
 @font-face {
-  font-family: 'American Typewriter Bold';
+  font-family: 'American Typewriter';
   src: url('../fonts/american-typewriter-bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
@@ -60,6 +60,17 @@ a {
 }
 a:hover {
   text-decoration: underline;
+}
+.no-underline {
+  text-decoration: none;
+  font-weight:normal;
+}
+.no-underline:hover {
+  text-decoration: none;
+  font-weight:normal;
+}
+span:hover {
+  text-decoration:underline;
 }
 p {
   font-family: 'American Typewriter';
