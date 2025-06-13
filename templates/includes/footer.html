@@ -12,37 +12,30 @@
       </section>
       <section class="">
         <div class="row">
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Disclaimer</h5>
+          <div class="col-lg-5 col-md-6 mb-4 mb-md-0">
+            <h5><strong>Disclaimer</strong></h5>
             <p>While we strive to provide thorough and reliable information, such information is not to be considered legal advice and for specific legal concerns, we recommend consulting with your local solicitor.</p>
           </div>
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
+          <div class="col-lg-2 col-md-6 offset-lg-2">
             <ul class="list-unstyled mb-0">
               <li>
-                <a class="text-body" href="{% url 'home' %}">Home</a>
+                <a class="nav-link" href="{% url 'home' %}"><span>Home</span></a>
               </li>
               <li>
-                <a class="text-body" href="{% url 'about' %}">About</a>
+                <a class="nav-link" href="{% url 'about' %}"><span>About</span></a>
+              </li>
+              <li>
+                <a class="nav-link" href="{% url 'resources' %}"><span>Resources</span></a>
               </li>
             </ul>
           </div>
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
-            <ul class="list-unstyled mb-0">
+          <div class="col-lg-2 col-md-6">
+            <ul class="list-unstyled mb-0 mt-1">
               <li>
-                <a class="text-body" href="{% url 'resources' %}">Resources</a>
+                <a class="nav-link" href="{% url 'events' %}"><span>Fundraising</span></a>
               </li>
               <li>
-                <a class="text-body" href="{% url 'events' %}">Fundraising</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a class="text-body" href="{% url 'contact' %}">Contact Us</a>
+                <a class="nav-link" href="{% url 'contact' %}"><span>Contact Us</span></a>
               </li>
             </ul>
           </div>

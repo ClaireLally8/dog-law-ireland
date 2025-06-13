@@ -16,85 +16,83 @@
   font-weight: lighter;
   font-style: normal;
 }
+:root {
+  /* Colors */
+  --color-background: #F7F4F1;
+  --color-navbar-footer-bg: #E8E2DC;
+  --color-primary-accent: #4A7551; /* Earthy green */
+  --color-secondary-accent: #3B4964; /* Deep slate blue */
+  --color-text-body: #222222; /* Dark charcoal */
+  --color-text-headings: #3B2F2F; /* Rich dark brown */
+}
 * {
   box-sizing: inherit;
-  color: black;
+  color: var(--color-text-body);
 }
 html {
   height: 100%;
   box-sizing: border-box;
   text-align: center;
 }
-
 body {
   height: 100%;
-  background-color:#F7F4F1;
+  background-color:var(--color-background);
+  font-family:'American Typewriter';
 }
-nav {
-  box-shadow: 0 4px 2px -3px gray;
-  background-color: #F3EEEA;
+nav,
+footer {
+  background-color: var(--color-navbar-footer-bg);
 }
 .bg-body-tertiary {
-  background-color: #F3EEEA!important;
+  background-color: var(--color-navbar-footer-bg) !important;
 }
-footer {
-  box-shadow: 0 4px 2px -3px gray inset;
-  background-color: #F3EEEA;
-}
-
 .wrapper {
   min-height: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;
-
 }
 h1, h2, h3, h4, h5 {
   font-family:'American Typewriter';
-  color: black !important;
-  text-transform: capitalize;
+  color: var(--color-text-body);
+}
+.index-icon {
+  font-size:larger;
 }
 a {
-  font-family:'American Typewriter';
-  color: black !important;
-  font-weight: bold;
-}
-a:hover {
-  text-decoration: underline;
-}
-.no-underline {
-  text-decoration: none;
-  font-weight:normal;
-}
-.no-underline:hover {
-  text-decoration: none;
-  font-weight:normal;
-}
-span:hover {
+  color: var(--color-text-body);
   text-decoration:underline;
 }
-p {
-  font-family: 'American Typewriter';
+a:hover {
+  color: var(--color-primary-accent);
+}
+.nav-link {
+  color: var(--color-text-body)
+}
+.nav-link:hover{
+  text-decoration: underline;
 }
 .icon {
   height:150px;
   width: 150px;
 }
-a {
-  text-decoration: none;
-}
 .page-link {
-  background-color: #F7F4F1;
+  background-color: var(--color-background);
+  color: var(--color-text-body);
+}
+.page-link:hover{
+  background-color: var(--color-navbar-footer-bg);
+  color: var(--color-text-body);
 }
 .page-item.disabled .page-link {
-  background-color: #F3EEEA;
+  background-color: var(--color-navbar-footer-bg);
 }
 .page-item.active .page-link {
-  background-color: #C6A58B;
+  background-color: var(--color-primary-accent);
 }
 .card {
   border:none;
   box-shadow: none;
-  background-color: #F7F4F1;
+  background-color: var(--color-background);
 }
 .card-img-top {
   border-radius: 15px;

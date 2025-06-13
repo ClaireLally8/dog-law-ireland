@@ -11,6 +11,10 @@
             <div class="col-sm-12 col-md-6 col-lg-6">
               <h3 class="my-4">{{ featured.name }}</h3>
               <p> {{ featured.description|safe}}</p>
+              {% if featured.URL %}
+              <a href="{{ featured.URL }}" target="_blank">{% if featured.url_name %} {{featured.url_name}} {% else %} Find out more! {% endif %}</a>
+              {% endif %}
+              <br><a href = "{% url 'event_detail' featured.slug %}" class="no-underline">Read More</a>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-6">
                 <div id="featuredEventCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -46,8 +50,7 @@
              <div class="card-body">
                <h5 class="card-title my-3">{{ e.name }}
                </h5>
-               <p class="card-text">{{ e.tagline }}</p>
-               <span>Read More!</span></a>
+               <p class="card-text">{{ e.tagline }}</p>Read More</a>
              </div>
            </div>
          

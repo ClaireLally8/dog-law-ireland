@@ -13,12 +13,12 @@
                 <p>{{ resource.description|safe }}</p>
                 {% if resource.file %}
                 <p>
-                <a href="{{ resource.file.url }}" target="_blank">{% if resource.file_name %} {{resource.file_name}} {%else %} Read More Here! {% endif %}</a>
+                <a href="{{ resource.file.url }}" target="_blank">{% if resource.file_name %} {{resource.file_name}} {%else %} Read More Here {% endif %}</a>
                 {% endif %}
             </p>
             <p>
                 {% if resource.URL %}
-                <a href="{{ resource.URL }}" target="_blank">{% if resource.url_name %} {{resource.url_name}} {% else %} Read More Here! {% endif %}</a>
+                <a href="{{ resource.URL }}" target="_blank">{% if resource.url_name %} {{resource.url_name}} {% else %} Read More Here {% endif %}</a>
                 {% endif %}
             </p>
             </div>
