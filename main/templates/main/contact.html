@@ -2,32 +2,58 @@
 {% load static %}
 
 {% block content %}
-<div class="container">
-    <h1 class="mt-5 text-center">Contact Us</h1>
-    <div class="container my-5 d-flex justify-content-center">
-        <div class="row">
-            <div class="col-md-6 col-lg-6 col-sm-12">
-                <img src="{% static 'imgs/landing-image.png' %}" class="img-fluid">
+
+<!-- Hero Section -->
+<section class="py-5 text-center">
+  <div class="container">
+    <h1 class="display-5 fw-bold">Contact Us</h1>
+    <p class="lead">We’d love to hear from you — just reach out via email or follow us on social media.</p>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <div class="card border-0 p-4">
+        <div class="row align-items-center">
+          
+          <!-- Contact Info -->
+          <div class="col-md-6 order-2 order-md-1 mt-4 mt-md-0">
+            <div class="text-center text-md-start">
+              <h5 class="mb-3">Follow us online:</h5>
+              <div class="mb-4">
+                <a class="btn btn-outline-secondary btn-lg rounded-circle me-2" href="https://www.facebook.com/p/Dog-Law-Ireland-61566183272232/" target="_blank" aria-label="Facebook">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="btn btn-outline-secondary btn-lg rounded-circle me-2" href="https://www.instagram.com/doglawireland/" target="_blank" aria-label="Instagram">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a class="btn btn-outline-secondary btn-lg rounded-circle me-2" href="https://www.tiktok.com/@dog.law.ireland" target="_blank" aria-label="TikTok">
+                  <i class="fab fa-tiktok"></i>
+                </a>
+                <a class="btn btn-outline-secondary btn-lg rounded-circle me-2" href="https://www.linkedin.com/company/dog-law-ireland/" target="_blank" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+
+              <h5 class="mb-2">Email Us</h5>
+              <p>
+                <a href="mailto:doglawireland@gmail.com" class="text-decoration-none fw-semibold">doglawireland@gmail.com</a><br>
+                <small class="text-muted">Please note we cannot provide legal advice.</small>
+              </p>
             </div>
-            <div class="col-md-6 col-lg-6 col-sm-12 d-flex align-items-center">
-                <div>
-                    <h5 class="text-center mb-2">Follow us online:</h5>
-                    <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1 contact-button" href="https://www.facebook.com/p/Dog-Law-Ireland-61566183272232/" role="button"
-                    ><i class="fab fa-facebook-f"></i></a>
-                  <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1 contact-button" href="https://www.instagram.com/doglawireland/" role="button"
-                    ><i class="fab fa-instagram"></i></a>
-                  <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1 contact-button" href="https://www.tiktok.com/@dog.law.ireland" role="button"
-                  ><i class="fab fa-tiktok"></i></a>
-                  <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1 contact-button" href="https://www.linkedin.com/company/dog-law-ireland/" role="button"
-                    ><i class="fab fa-linkedin-in"></i></a>
-                    <h5 class="mt-5 mb-2 text-center">Email Us:</h5>
-                    <p><a href="mailto:doglawireland@gmail.com">doglawireland@gmail.com</a>
-                        <br>Please do be aware that we cannot provide legal
-                        advice.</p>
-                </div>
-                
-            </div>
+          </div>
+
+          <!-- Image -->
+          <div class="col-md-6 order-1 order-md-2">
+            <img src="{% static 'imgs/landing-image.png' %}" class="img-fluid rounded" alt="Contact illustration">
+          </div>
+
         </div>
+      </div>
     </div>
+  </div>
 </div>
+
 {% endblock %}

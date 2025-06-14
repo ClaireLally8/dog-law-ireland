@@ -135,11 +135,12 @@ a:hover {
 .btn-primary {
   background-color: var(--color-primary-accent);
   border-color: var(--color-primary-accent);
-  color: white;
+  color:var(--color-background);
 }
 
 a.btn-primary:hover {
   background-color: darken(var(--color-text-body), 10%);
+  border-color: var(--color-primary-accent);
   color:var(--color-text-body);
 }
 
@@ -150,5 +151,11 @@ a.btn-outline-secondary {
 
 a.btn-outline-secondary:hover {
   background-color: var(--color-secondary-accent);
-  color: white;
+  color: var(--color-background);
+}
+.fab {
+  color:var(--color-text-body);
+}
+.fab:hover{
+  color:var(--color-background);
 }
