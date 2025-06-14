@@ -2,43 +2,64 @@
 {% load static %}
 
 {% block content %}
-<h1 class="my-5 text-center">{{event.name}}</h1>
-<div class="container my-5 d-flex justify-content-center">
-    <div class="row">
-        <div class="col-md-6 col-lg-6 col-sm-12">
-            <div id="featuredEventCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  {% for f in event.images.all %}
-                  <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                    <img src="{{ f.image.url }}" class="d-block w-100 img-fluid rounded shadow-sm" alt="Image for {{ event.name }}" style="object-fit: contain; max-height: 500px;">
-                  </div>
-                  {% endfor %}
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#featuredEventCarousel" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#featuredEventCarousel" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-        </div>
-        <div class="col-md-6 col-lg-6 col-sm-12 d-flex align-items-center">
-          <div>
-            <p>
-              {{ event.description|safe  }} 
-            </p>
-            <p>
-              {% if event.URL %}
-              <a href="{{ event.URL }}" target="_blank">{% if event.url_name %} {{event.url_name}} {% else %} Find out more! {% endif %}</a>
-              {% endif %}
-          </p>
-          </div>
-            
-        </div>
-    </div>
-</div>
-</div>
+<!-- Hero Section -->
+<section class="py-5 text-center">
+  <div class="container">
+    <h1 class="display-5 fw-bold">{{ event.name }}</h1>
+    {% if event.event_date %}
+      <p class="text-muted mb-1">
+        <i class="bi bi-calendar-event me-1"></i> {{ event.event_date }}
+      </p>
+    {% endif %}
+    {% if event.event_location %}
+      <p class="text-muted">
+        <i class="bi bi-geo-alt me-1"></i> {{ event.event_location }}
+      </p>
+    {% endif %}
+  </div>
+</section>
 
+<!-- Main Content Section -->
+<div class="container my-5">
+  <div class="row align-items-center">
+    <!-- Carousel: Show first on mobile -->
+    <div class="col-md-6 col-sm-12 order-1 order-md-2 mb-4 mb-md-0">
+      <div class="card shadow-sm border-0">
+        <div id="eventEventCarousel" class="carousel slide" data-bs-ride="carousel" role="region" aria-label="Event Images Carousel">
+          <div class="carousel-inner">
+            {% for f in event.images.all %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+              <img src="{{ f.image.url }}" class="d-block w-100 img-fluid rounded-3"
+                   style="object-fit: contain; height: 500px;">
+            </div>
+            {% endfor %}
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#eventEventCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#eventEventCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Event Description -->
+    <div class="col-md-6 col-sm-12 order-2 order-md-1 d-flex align-items-center">
+      <div class="card border-0 shadow-sm p-4 w-100 d-flex align-items-center">
+        <p class="lead">Event Details</p>
+        <p>{{ event.description|safe }}</p>
+
+        {% if event.URL %}
+        <a href="{{ event.URL }}" target="_blank" class="btn btn-primary mt-3">
+          {% if event.url_name %}{{ event.url_name }}{% else %}Find out more{% endif %}
+        </a>
+        {% endif %}
+      </div>
+    </div>
+
+  </div>
+</div>
 {% endblock %}

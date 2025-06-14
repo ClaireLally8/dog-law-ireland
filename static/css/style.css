@@ -131,3 +131,24 @@ a:hover {
   width: 100%;             /* Full width */
   display: block;          /* Removes inline spacing */
 }
+
+.btn-primary {
+  background-color: var(--color-primary-accent);
+  border-color: var(--color-primary-accent);
+  color: white;
+}
+
+a.btn-primary:hover {
+  background-color: darken(var(--color-text-body), 10%);
+  color:var(--color-text-body);
+}
+
+a.btn-outline-secondary {
+  color: var(--color-secondary-accent);
+  border-color: var(--color-secondary-accent);
+}
+
+a.btn-outline-secondary:hover {
+  background-color: var(--color-secondary-accent);
+  color: white;
+}

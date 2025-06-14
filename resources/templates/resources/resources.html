@@ -12,7 +12,7 @@
         <div class="card" style="max-width: 18rem;">
           {% if r.image %} 
           <div class="d-flex justify-content-center">
-            <img src="{{ r.image.url }}" class="card-img-top border-rounded" style="height: 350px; width:350px;">
+            <img src="{{ r.image.url }}" class="card-img-top border-rounded" style="max-height: 350px; max-width:350px;">
           </div>
           {% endif %}
           <div class="card-body">
@@ -32,5 +32,40 @@
     
     {% endfor %}
   </div>
+</div>
+<div aria-label="Page navigation" class="d-flex justify-content-center">
+  <ul class="pagination">
+
+    <!-- Previous -->
+    {% if resources.has_previous %}
+      <li class="page-item">
+        <a class="page-link" href="?page={{ resources.previous_page_number }}">&laquo;</a>
+      </li>
+    {% else %}
+      <li class="page-item disabled"><span class="page-link">&laquo;</span></li>
+    {% endif %}
+
+    <!-- Page Numbers with Ellipses -->
+    {% pagination_range resources.number resources.paginator.num_pages as pages %}
+    {% for p in pages %}
+      {% if p == '…' %}
+        <li class="page-item disabled"><span class="page-link">…</span></li>
+      {% elif p == resources.number %}
+        <li class="page-item active"><span class="page-link">{{ p }}</span></li>
+      {% else %}
+        <li class="page-item"><a class="page-link" href="?page={{ p }}">{{ p }}</a></li>
+      {% endif %}
+    {% endfor %}
+
+    <!-- Next -->
+    {% if resources.has_next %}
+      <li class="page-item">
+        <a class="page-link" href="?page={{ resources.next_page_number }}">Next &raquo;</a>
+      </li>
+    {% else %}
+      <li class="page-item disabled"><span class="page-link">&raquo;</span></li>
+    {% endif %}
+
+  </ul>
 </div>
 {% endblock%}

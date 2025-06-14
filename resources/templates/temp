@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+{% load pagination_tags %}
+
+
+{% block content %}
+<h1 class="my-5 text-center"> Fundraising Events</h1>
+        {% if featured %}
+        <div class="container">
+         
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <h3 class="my-4">{{ featured.name }}</h3>
+              <p> {{ featured.description|safe}}</p>
+              {% if featured.URL %}
+             
+              {% endif %}
+              <br><a href = "{% url 'event_detail' featured.slug %}" class="no-underline">Read More</a>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <div id="featuredEventCarousel" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    {% for f in featured.images.all %}
+                    <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                      <img src="{{ f.image.url }}" class="d-block w-100 img-fluid rounded shadow-sm" alt="Image for {{ featured.name }}" style="object-fit: contain; max-height: 300px;">
+                    </div>
+                    {% endfor %}
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#featuredEventCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#featuredEventCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+          </div>
+        </div>
+        </div>
+    {% endif %}
+    <h2 class="my-4">Other Events</h2>
+<div class="row mx-2 d-flex justify-content-between">
+    {% for e in events %}
+    <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-5 d-flex justify-content-evenly">
+      <a href = "{% url 'event_detail' e.slug %}" class="no-underline">
+        <div class="card" style="max-width: 18rem;">
+            {% if e.images.all %} 
+             <img src= {{ e.images.all.0.image.url }} class="card-img-top border-rounded" style="height: 250px; width:250px;">
+             {% endif %}
+             <div class="card-body">
+               <h5 class="card-title my-3">{{ e.name }}
+               </h5>
+               <p class="card-text">{{ e.tagline }}</p>Read More</a>
+             </div>
+           </div>
+         
+    </div>
+  
+    {% endfor %}
+</div>
+
+
+
+
+
+
+
+{% endblock %}

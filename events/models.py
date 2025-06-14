@@ -10,6 +10,8 @@ class Event(models.Model):
     slug = models.SlugField(unique=True, blank=True)
     tagline = models.TextField(blank=True, null=True)
     description = models.TextField(blank=True, null=True)
+    event_date = models.DateTimeField(blank=True, null=True)
+    event_location = models.CharField(max_length=100, blank=True, null=True)
     uploaded_at = models.DateTimeField(auto_now_add=True)
     featured = models.BooleanField(default=False)
     URL = models.URLField(blank=True)
