@@ -24,12 +24,12 @@
   <div class="row align-items-center">
     <!-- Carousel: Show first on mobile -->
     <div class="col-md-6 col-sm-12 order-1 order-md-2 mb-4 mb-md-0">
-      <div class="card shadow-sm border-0">
+      <div class="card border-0">
         <div id="eventEventCarousel" class="carousel slide" data-bs-ride="carousel" role="region" aria-label="Event Images Carousel">
           <div class="carousel-inner">
             {% for f in event.images.all %}
             <div class="carousel-item {% if forloop.first %}active{% endif %}">
-              <img src="{{ f.image.url }}" class="d-block w-100 img-fluid rounded-3"
+              <img src="{{ f.image.url }}" class="d-block w-100 img-fluid rounded-4"
                    style="object-fit: contain; height: 500px;">
             </div>
             {% endfor %}
@@ -48,7 +48,7 @@
 
     <!-- Event Description -->
     <div class="col-md-6 col-sm-12 order-2 order-md-1 d-flex align-items-center">
-      <div class="card border-0 shadow-sm p-4 w-100 d-flex align-items-center">
+      <div class="card border-0 p-4 w-100 d-flex align-items-center">
         <p class="lead">Event Details</p>
         <p>{{ event.description|safe }}</p>
 
