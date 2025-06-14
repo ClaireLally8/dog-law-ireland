@@ -4,6 +4,7 @@ from django.core.exceptions import ValidationError
 
 class Resource(models.Model):
     name = models.CharField(max_length=255)
+    banner_image = models.ImageField(upload_to='uploads/',blank=True, null=True)
     slug = models.SlugField(blank=True)
     description = models.TextField(blank=True, null=True)
     tagline = models.TextField(blank=True, null=True)

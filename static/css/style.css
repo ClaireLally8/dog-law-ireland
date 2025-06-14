@@ -54,6 +54,7 @@ footer {
 h1, h2, h3, h4, h5 {
   font-family:'American Typewriter';
   color: var(--color-text-body);
+  font-weight:normal;
 }
 .index-icon {
   font-size:larger;
@@ -97,12 +98,36 @@ a:hover {
 .card-img-top {
   border-radius: 15px;
 }
-.card-title {
-  text-transform: capitalize;
+.card-link-wrapper {
+  text-decoration: none;
+}
+.no-link-style {
+  text-decoration: none;
+}
+.read-more-link {
+  color: var(--color-text-body);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+.card-link-wrapper:hover .read-more-link {
+  color: var(--color-primary-accent);
 }
 .featured {
   max-width: 40vw;
 }
 .icon-about {
   max-width: 300px;
+}
+.custom-bg-opacity {
+  background-color: rgba(74, 117, 81, 0.8); /* 50% opacity */
+  color:var(--color-navbar-footer-bg);
+  max-width: 80vw;
+  min-width: 60vw;
+}
+.banner img {
+  min-height: 500px;
+  max-height: 500px;
+  object-fit: cover;       /* Ensures image covers the area, cropping if needed */
+  width: 100%;             /* Full width */
+  display: block;          /* Removes inline spacing */
 }

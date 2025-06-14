@@ -3,64 +3,34 @@
 {% load pagination_tags %}
 
 {% block content %}
+<h1 class="my-5">Resources</h1>
 <div class="container">
-    <h1 class="mt-5 text-center">Resources</h1>
-<div class="row mx-2 d-flex justify-content-evenly">
+  <div class="row">
     {% for r in resources %}
-    <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-5 d-flex justify-content-center">
+    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 my-5 px-1 d-flex justify-content-center">
+      <a href="{% url 'resource_detail' r.slug %}" class="card-link-wrapper text-decoration-none">
         <div class="card" style="max-width: 18rem;">
-            {% if r.image %} 
-             <img src= "{{ r.image.url }}" class="card-img-top border-rounded" style="height: 250px; width:250px;">
-             {% endif %}
-             <div class="card-body">
-               <h5 class="card-title my-3">{{ r.name }}
-               </h5>
-               {% if r.tagline %} 
-               <p class="card-text">{{ r.tagline }}</p>
-               {% else %}
-               <p class="card-text">{{r.description|truncatewords:10 }}</p>
-               {% endif %}
-               <a href = "{% url 'resource_detail' r.slug %}">Read More</a>
-             </div>
-           </div>
-         
-    </div>
-    {% endfor %}
-</div>
-    <div aria-label="Page navigation" class="d-flex justify-content-center mt-5">
-      <ul class="pagination">
-    
-        <!-- Previous -->
-        {% if resources.has_previous %}
-          <li class="page-item">
-            <a class="page-link" href="?page={{ resources.previous_page_number }}">&laquo;</a>
-          </li>
-        {% else %}
-          <li class="page-item disabled"><span class="page-link">&laquo;</span></li>
-        {% endif %}
-    
-        <!-- Page Numbers with Ellipses -->
-        {% pagination_range resources.number resources.paginator.num_pages as pages %}
-        {% for p in pages %}
-          {% if p == '…' %}
-            <li class="page-item disabled"><span class="page-link">…</span></li>
-          {% elif p == resources.number %}
-            <li class="page-item active"><span class="page-link">{{ p }}</span></li>
-          {% else %}
-            <li class="page-item"><a class="page-link" href="?page={{ p }}">{{ p }}</a></li>
+          {% if r.image %} 
+          <div class="d-flex justify-content-center">
+            <img src="{{ r.image.url }}" class="card-img-top border-rounded" style="height: 350px; width:350px;">
+          </div>
           {% endif %}
-        {% endfor %}
-    
-        <!-- Next -->
-        {% if resources.has_next %}
-          <li class="page-item">
-            <a class="page-link" href="?page={{ resources.next_page_number }}">Next &raquo;</a>
-          </li>
-        {% else %}
-          <li class="page-item disabled"><span class="page-link">&raquo;</span></li>
-        {% endif %}
-    
-      </ul>
+          <div class="card-body">
+            <h4 class="card-title pt-2 no-link-style">{{ r.name }}</h4>
+            <p class="card-text pt-1 no-link-style">
+              {% if r.tagline %} 
+                {{ r.tagline }}
+              {% else %}
+                {{ r.description|truncatewords:10 }}
+              {% endif %}
+            </p>
+            <span class="read-more-link">Read more →</span>
+          </div>
+        </div>
+      </a>
     </div>
+    
+    {% endfor %}
+  </div>
 </div>
-{% endblock %}
+{% endblock%}

@@ -2,27 +2,35 @@
 {% load static %}
 
 {% block content %}
-<h1 class="m-5">{{ resource.name }}</h1>
-<div class="container">
-    <div class="row">
-        <div class="col-md-6 col-lg-5 col-sm-12">
-            <img class="img-fluid rounded" src="{{ resource.image.url }}">
-        </div>
-        <div class="col-md-6 col-lg-6 col-sm-12 d-flex align-items-center offset-lg-1 my-4">
-            <div>
-                <p>{{ resource.description|safe }}</p>
-                {% if resource.file %}
-                <p>
-                <a href="{{ resource.file.url }}" target="_blank">{% if resource.file_name %} {{resource.file_name}} {%else %} Read More Here {% endif %}</a>
-                {% endif %}
-            </p>
-            <p>
-                {% if resource.URL %}
-                <a href="{{ resource.URL }}" target="_blank">{% if resource.url_name %} {{resource.url_name}} {% else %} Read More Here {% endif %}</a>
-                {% endif %}
-            </p>
-            </div>
-        </div>
+<div class="banner position-relative text-center">
+    {% if resource.banner_image %}
+    <img src="{{ resource.banner_image.url }}" class="img-fluid w-100">
+    {% else %}
+    <img src="{{ resource.image.url }}" class="img-fluid w-100">
+    {% endif %}
+    <div class="position-absolute top-50 start-50 translate-middle px-3">
+      <h2 class="display-4 fw-bold custom-bg-opacity p-3 rounded">{{ resource.name }}</h2>
     </div>
-</div>
+  </div>
+  <div class="container">
+    <div class="row col-lg-6 col-md-6 col-sm-10 offset-sm-1 offset-md-3 offset-lg-3 mt-5 mb-2">
+        <p>{{ resource.description|safe }}</p>
+    </div>
+    {% if resource.file %}
+    <p>
+    <a href="{{ resource.file.url }}" target="_blank">{% if resource.file_name %} {{resource.file_name}} {%else %} Read More {% endif %}</a>
+    {% endif %}
+</p>
+<p>
+    {% if resource.URL %}
+    <a href="{{ resource.URL }}" target="_blank">{% if resource.url_name %} {{resource.url_name}} {% else %} Read More{% endif %}</a>
+    {% endif %}
+  </div>
+  {% if resource.banner_image %}
+  <div class="container my-5">
+    <div class="col-md-3 col-lg-4 col-sm-10 offset-sm-1 offset-md-6 offset-lg-4">
+        <img class="img-fluid rounded" src="{{ resource.image.url }}">
+    </div>
+  </div>
+{% endif %}
 {% endblock %}
