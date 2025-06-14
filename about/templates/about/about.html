@@ -2,101 +2,100 @@
 {% load static %}
 
 {% block content %}
-<div class="container">
-    <h1 class="mt-5 text-center">About Us</h1>
-    <div class="container my-5 d-flex justify-content-center">
-        <div class="row">
-            <div class="col-md-6 col-lg-6 col-sm-12 offset-lg-3 offset-md-3">
-                <img class="img-fluid" src="{% static 'imgs/group-photo.jpeg' %}">
-            </div>
-        </div>
+  <div class="container my-5">
+    <h1 class="display-4 fw-bold">About Us</h1>
+    <p class="lead">Founded in August 2024 by solicitors Hannah Unger, Carrie McMeel and Demi Mullen, Dog Law Ireland (DLÍ) is dedicated to making dog law accessible and understood by all.</p>
+  </div>
+<div class="container d-flex justify-content-center my-5">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <img class="img-fluid rounded shadow" src="{% static 'imgs/group-photo.jpeg' %}" alt="Dog Law Ireland Founders">
     </div>
-    <div>
-        <p class="text-center">In August 2024, solicitors Hannah Unger, Carrie McMeel and Demi Mullen founded Dog Law
-            Ireland (or DLÍ, which is also the Irish word for “Law”).</p>
-    </div>
+  </div>
 </div>
+
+<!-- Our Purpose -->
+<div class="container mt-5">
+  <h2 class="text-center">Our Purpose</h2>
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <img src="{% static 'imgs/landing-image.png' %}" class="img-fluid rounded" alt="Dog advocacy image">
+    </div>
+    <div class="col-md-6 mt-4 mt-md-0">
+      <p class="fs-6">
+        We cannot change what we don’t understand, so we want to make dog law accessible and easily understood by everyone – the general public, animal rescues, An Garda Síochána, the Government, the veterinary community, the legal profession, and all those working in the canine industry.
+      </p>
+      <p class="fs-6">
+        While we are small in number, we are determined to make a change. We've built wonderful relationships with advocates who have long fought for Ireland’s dogs, and we're grateful to the volunteers who support us. If you’d like to get involved, especially as a legal researcher — please reach out!
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Team Section -->
 <div class="container my-5">
-    <div class="row">
-        <h3 class="my-3">Our Purpose</h3>
-        <div class="col-md-6 col-lg-6 col-sm-12">
-            <img src="{% static 'imgs/landing-image.png' %}" class="img-fluid">
-        </div>
-        <div class="col-md-6 col-lg-6 col-sm-12 mt-5 d-flex align-items-center">
-            <div class="text">
-                <p>We cannot change what we don’t understand... so we want to make dog law accessible and easily understood
-                    by everyone - the general public, animal rescues, An Garda Síochána, the Government, the veterinarian
-                    community, the legal profession &amp; all those working in the canine industry. <br><br> While we are small in number, we are determined to make a change. We are also very fortunate to have
-                    developed so many wonderful relationships with those who have been at the forefront of advocating for Ireland’s
-                    dogs long before Dog Law Ireland became Dog Law Ireland. We also have some wonderful people volunteering their time to help us &amp; we are always open to hearing
-                    from people who would like to help (in particular legal researchers!) so please do get in touch if you would like to get involved.
-                </p>
-            
-            </div>
-           
-        </div>
+  <h2 class="text-center mb-5">Meet the DLI Team</h2>
+  <div class="row justify-content-center">
+    {% for p in about %}
+    <div class="col-md-6 col-lg-4 mb-4 d-flex align-items-stretch">
+      <div class="card shadow-sm border-0 px-3 py-4 text-center">
+        <img src="{{ p.image.url }}" alt="{{ p.name }}" class="img-fluid rounded mb-3" style="max-height: 350px; width: auto; object-fit: cover;">
+        <h4 class="fw-semibold">{{ p.name }}</h4>
+        <p class="mt-2">{{ p.bio }}</p>
+      </div>
     </div>
+    {% endfor %}
+  </div>
 </div>
+
+<!-- Accomplishment Highlight -->
+<div class="container">
+  <h2 class="text-center my-5">Our Accomplishments</h2>
+  <div class="row align-items-center">
+    <div class="col-lg-4 col-md-4 offset-md-1 col-sm-12 mb-4">
+      <img src="{{ xlreview.image.url }}" class="img-fluid rounded shadow" alt="XL Bully case image">
+    </div>
+    <div class="col-lg-4 col-md-4 offset-md-1 col-sm-12 mb-4">
+      <p class="fs-6 text-center">
+        One of our proudest accomplishments has been supporting the legal team who challenged the XL Bully Regulations. This judicial review has led to clearer laws and better safeguards for dog owners and their companions.
+      </p>
+      {% if xlreview.URL %}
+        <p class="text-center">
+          <a href="{{ xlreview.URL }}" target="_blank" class="btn btn btn-primary mt-3">Read more about this case</a>
+        </p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<!-- Accomplishments Icons -->
 <div class="container my-5">
-    <h3>Meet the DLI Team</h3>
-    <div class="row mt-5 mb-4 d-flex justify-content-between">
-        {% for p in about %}
-        <div class="col-lg-4 col-md-4 col-sm-12 px-5">
-            <div class="my-4 d-flex justify-content-center">
-                <img class="img-fluid rounded" style="max-height: 300px;" src="{{ p.image.url }}">
-            </div>
-            <h4 class="mb-3 ms-4">{{ p.name }}</h4>
-            <p>{{ p.bio }}</p>
-        </div>
-        {% endfor %}
+  <div class="row text-center g-4">
+    <div class="col-md-6 col-lg-3">
+      <div class="p-4 shadow-sm rounded h-100">
+        <img src="{% static 'imgs/bully.svg' %}" class="img-fluid mb-3" style="max-height: 100px;" alt="Bully Regulations Icon">
+        <p>Submitted open letters to the Minister for Rural and Community Development on the XL Bully Regulations.</p>
+      </div>
     </div>
-</div>
-<div class="container">
-    <h3 class="my-5 text-center">Our Accomplishments</h3>
-    <div class="row">
-        <div class="col-md-6 col-lg-6 col-sm-12 mb-5">
-            <img src="{{ xlreview.image.url }}" class="img-thumbnail"style="max-height: 300px;">
-        </div>
-        <div class="col-md-6 col-lg-6 col-sm-12 mb-5 d-flex align-items-center">
-            <div>
-                <p class="text-center">One of our proudest accomplishments to date has been providing support to the legal team who took a judicial review
-                    against the XL Bully Regulations. As a result of this challenge, the law is going to be made clearer and will ensure
-                    better safeguards for owners and dogs.</p>
-                    {% if xlreview.URL %}
-                    <a href="{{ xlreview.URL }}" target="_blank">You can read more about the work done here</a>
-                    {% endif %}
-            </div>
-            </div>
+    <div class="col-md-6 col-lg-3">
+      <div class="p-4 shadow-sm rounded h-100">
+        <img src="{% static 'imgs/pledge.svg' %}" class="img-fluid mb-3" style="max-height: 100px;" alt="Pledge Icon">
+        <p>Created the “Pawsitive Pledge” for election candidates to support humane dog legislation.</p>
+      </div>
     </div>
+    <div class="col-md-6 col-lg-3">
+      <div class="p-4 shadow-sm rounded h-100">
+        <img src="{% static 'imgs/save.svg' %}" class="img-fluid mb-3" style="max-height: 100px;" alt="Save Dogs Icon">
+        <p>Met with dog-loving politicians to support private member bills in favour of canine welfare.</p>
+      </div>
     </div>
-<div class="container">
-    <div class="row d-flex justify-content-around">
-        <div class="col-sm-12 col-md-6 col-lg-3 z-depth-1 py-5 px-5">
-                <div class="d-flex justify-content-center">
-                    <img class="icon-about" src="{% static 'imgs/bully.svg' %}" style="max-height: 150px;"></div>
-                    <div class="d-flex justify-content-center">
-                        <p>Submitted open letters to the Minister for Rural and Community Development in relation to the XL Bully
-                            Regulations</p></div>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-3 z-depth-1 py-5 px-5">
-                <div class="d-flex justify-content-center">
-                    <img class="icon-about" src="{% static 'imgs/pledge.svg' %}" style="max-height: 150px;"></div>
-                    <div class="d-flex justify-content-center">
-                        <p>Prepared a “Pawsitive Pledge” for general election candidates to sign</div>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-3 z-depth-1 py-5 px-5">
-                <div class="d-flex justify-content-center">
-                    <img class='icon-about' src="{% static 'imgs/save.svg' %}" style="max-height: 150px;"></div>
-                    <div class="d-flex justify-content-center">
-                        <p>Met with a number of dog loving politicians to discuss plans to prepare private members bills</p></div>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-3 z-depth-1 py-5 px-5">
-                <div class="d-flex justify-content-center">
-                    <img class='icon-about' src="{% static 'imgs/info.svg' %}" style="max-height: 150px;"></div>
-                    <div class="d-flex justify-content-center">
-                    <p>Submitted countless freedom of information requests, parliamentary questions; and much much more</p></div>
-        </div>
+    <div class="col-md-6 col-lg-3">
+      <div class="p-4 shadow-sm rounded h-100">
+        <img src="{% static 'imgs/info.svg' %}" class="img-fluid mb-3" style="max-height: 100px;" alt="Information Icon">
+        <p>Filed freedom of information requests, parliamentary questions, and more to promote transparency.</p>
+      </div>
     </div>
+  </div>
 </div>
 
 {% endblock %}
