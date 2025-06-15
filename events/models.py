@@ -32,3 +32,15 @@ class Event(models.Model):
 class EventImage(models.Model):
     event = models.ForeignKey(Event, related_name='images', on_delete=models.CASCADE)
     image = models.ImageField(upload_to='uploads/')
+
+class EventLink(models.Model):
+    event = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='links')
+    url = models.URLField()
+    name = models.CharField(max_length=100)
+    order = models.PositiveIntegerField(default=0)
+
+    class Meta:
+        ordering = ['order']
+
+    def __str__(self):
+        return f"{self.name} ({self.url})"
