@@ -35,6 +35,7 @@ ALLOWED_HOSTS = ['"https://web-production-eff60.up.railway.app','*',]
 CSRF_TRUSTED_ORIGINS = [
 "https://web-production-eff60.up.railway.app",
 "https://doglawireland.ie",
+'https://web-mirage.up.railway.app/',
 ]
 
 
