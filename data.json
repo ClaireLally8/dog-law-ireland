@@ -1,0 +1,501 @@
+[
+    {
+        "model": "about.about",
+        "pk": 1,
+        "fields": {
+            "name": "Carrie McMeel",
+            "bio": "5 years qualified, commercial, data protection and regulatory solicitor. Carrie regularly advises dog rescues in relation\r\nto legal issues as they arise for them. She has also extensively advised and drafted policies, agreements and\r\nprocedures for dog rescues. Carrie gives countless hours of volunteering at her local rescue, Dogs Aid and is the\r\nproud owner of her two gorgeous rescue dogs; Dots (Collon) &amp; Zag (Dogs Aid)",
+            "image": "uploads/carrie-mcmeel.fecaef13bc7a.jpeg"
+        }
+    },
+    {
+        "model": "about.about",
+        "pk": 2,
+        "fields": {
+            "name": "Demi Mullen",
+            "bio": "6 years qualified, investment funds solicitor. Demi co-established the Animal Law Network Ireland along with a\r\ncolleague in 2024 - a group for legal professionals and academics with an interest in animal law in Ireland. Demi has\r\npresented on dog law in Ireland at the UK Centre for Animal Law Conference and Causeway Coast Dog Rescue’s\r\nCompanion Animal Welfare Conference. Demi adopted her gorgeous furbaby Klaus from Cara Rescue in February\r\n2019.",
+            "image": "uploads/demi-mullen.jpeg"
+        }
+    },
+    {
+        "model": "about.about",
+        "pk": 3,
+        "fields": {
+            "name": "Hannah Unger",
+            "bio": "6 years qualified, public and regulatory law solicitor with Fieldfisher Ireland LLP. Along with her day to day work, she leads a pro bono team focused on reviewing dog laws and proposing reforms. In May 2024, Hannah published a report titled 'Key Reforms to Dog Breeding in Ireland' which she presented at Leinster House. In addition, she regularly shares her expertise in the media, contributing to both print and radio discussions on dog breeding reforms. Hannah also advises dog rescues in relation to legal issues as they arise for them and has assisted in drafting their policies and procedures. In addition, she advises private clients in relation to the Control of Dogs Act 1986 (as amended). Hannah fosters dogs for Dogs Angels Ireland and adopted the gorgeous Twinkle from Dogs Angels in 2022.",
+            "image": "uploads/hannah-unger.jpeg"
+        }
+    },
+    {
+        "model": "events.event",
+        "pk": 7,
+        "fields": {
+            "name": "Sashay for Strays",
+            "slug": "sashay-for-strays",
+            "tagline": "Fundraiser on 20 June 2025 with drag music bingo, karaoke & DJs in Street 66 on Parliament Street, Dublin 2 (dog friendly bar):\r\n\r\nTickets are 20euro and all proceeds will be split between \r\nDOGS ANGELS IRELAND\r\nWICKLOW ANIMAL WELFARE\r\nTHE HAVEN RESCUE\r\nWORKING ANIMAL GUARDIANS",
+            "description": "Dog Law Ireland and the Irish Dog Father are delighted to announce “<b>SASHAY FOR STRAYS</b>” taking place on 20 June 2025 in aid of four amazing dog rescues:\r\n\r\n<b>DOGS ANGELS IRELAND,\r\nWICKLOW ANIMAL WELFARE,\r\nTHE HAVEN RESCUE &amp; WORKING ANIMAL GUARDIANS. \r\n\r\nTickets are 20euro and available on Eventbrite.ie</b>",
+            "event_date": null,
+            "event_location": null,
+            "uploaded_at": "2025-05-25T19:33:24.742Z",
+            "featured": true,
+            "URL": "https://www.eventbrite.ie/e/sashay-for-strays-drag-music-bingo-and-karaoke-tickets-1370084201729",
+            "url_name": "Buy tickets here - Eventbrite.ie"
+        }
+    },
+    {
+        "model": "events.event",
+        "pk": 8,
+        "fields": {
+            "name": "Santa Paws",
+            "slug": "santa-paws",
+            "tagline": "Dog Law Ireland held a Santa Paws event on 23 November 2024 in aid of Dogs Angels Ireland & The Haven Rescue which raised an incredible €7,200.",
+            "description": "<p>Dog owners were able to get a photo with Santa Paws and their dog and also attend a gorgeous Christmas market! Thank you so much to all who came down to support. We raised an incredible €7,200.</p>",
+            "event_date": null,
+            "event_location": null,
+            "uploaded_at": "2025-05-25T19:44:16.886Z",
+            "featured": false,
+            "URL": "https://www.eventbrite.ie/e/santa-paws-in-aid-of-dogs-angels-ireland-the-haven-rescue-tickets-1078154421899",
+            "url_name": "Tickets Sales Closed"
+        }
+    },
+    {
+        "model": "events.event",
+        "pk": 9,
+        "fields": {
+            "name": "Raise the Woof",
+            "slug": "raise-the-woof",
+            "tagline": "Fundraiser for Dogs Angels Ireland & Wicklow Animal Welfare on 17 November 2023 in the Lighthouse Pub in Dun Laoghaire. The event raised €6,748!",
+            "description": "The event had performances from the Dublin Ukulele Collective and Bella Festa DJs. The event was packed with people who came to support Dogs Angels Ireland &amp; Wicklow Animal Welfare. Massive thank you to the Lighthouse Pub for hosting. The event raised €6,748!",
+            "event_date": null,
+            "event_location": null,
+            "uploaded_at": "2025-05-25T19:49:29.457Z",
+            "featured": false,
+            "URL": "https://www.eventbrite.ie/e/raise-the-woof-fundraiser-for-dogs-angels-ireland-wicklow-animal-welfare-tickets-735731662207?aff=ebdsoporgprofile",
+            "url_name": "Tickets Sales Closed"
+        }
+    },
+    {
+        "model": "events.event",
+        "pk": 10,
+        "fields": {
+            "name": "Padel, Pups, Pints",
+            "slug": "padel-pups-pints",
+            "tagline": "Fundraiser for Dogs Angels Ireland & Wicklow Animal Welfare on 07 September 2024 in Fitzpatrick Hotel, Killiney, including padel, yoga, hanging out with adorable pups & enjoying some cold pints with friends! The event raised €6,815!",
+            "description": "Fundraiser for Dogs Angels Ireland &amp; Wicklow Animal Welfare on 07 September 2024 in Fitzpatrick Hotel, Killiney, including padel, yoga, hanging out with adorable pups, &amp; enjoying some cold pints with friends!\r\n\r\nThe event raised €6,815!",
+            "event_date": null,
+            "event_location": null,
+            "uploaded_at": "2025-05-25T19:53:37.825Z",
+            "featured": false,
+            "URL": "https://www.eventbrite.ie/e/padel-pups-pints-tickets-991350204147?aff=ebdsoporgprofile",
+            "url_name": "Tickets Sales Closed"
+        }
+    },
+    {
+        "model": "events.eventimage",
+        "pk": 21,
+        "fields": {
+            "event": 7,
+            "image": "uploads/Sasahy_FINAL_logo.png"
+        }
+    },
+    {
+        "model": "events.eventimage",
+        "pk": 22,
+        "fields": {
+            "event": 7,
+            "image": "uploads/Victoria_secret.jpg"
+        }
+    },
+    {
+        "model": "events.eventimage",
+        "pk": 23,
+        "fields": {
+            "event": 8,
+            "image": "uploads/santa_paws.jpg"
+        }
+    },
+    {
+        "model": "events.eventimage",
+        "pk": 24,
+        "fields": {
+            "event": 9,
+            "image": "uploads/raise_the_woof_2.jpg"
+        }
+    },
+    {
+        "model": "events.eventimage",
+        "pk": 25,
+        "fields": {
+            "event": 10,
+            "image": "uploads/Graphic_WAW.png"
+        }
+    },
+    {
+        "model": "events.eventimage",
+        "pk": 26,
+        "fields": {
+            "event": 9,
+            "image": "uploads/Doggo-1-24.jpg"
+        }
+    },
+    {
+        "model": "events.eventimage",
+        "pk": 27,
+        "fields": {
+            "event": 9,
+            "image": "uploads/Doggo-1-18.jpg"
+        }
+    },
+    {
+        "model": "events.eventimage",
+        "pk": 28,
+        "fields": {
+            "event": 9,
+            "image": "uploads/Doggo-1-17.jpg"
+        }
+    },
+    {
+        "model": "events.eventimage",
+        "pk": 29,
+        "fields": {
+            "event": 9,
+            "image": "uploads/Doggo-1-28.jpg"
+        }
+    },
+    {
+        "model": "events.eventimage",
+        "pk": 30,
+        "fields": {
+            "event": 9,
+            "image": "uploads/Doggo-1-12.jpg"
+        }
+    },
+    {
+        "model": "events.eventimage",
+        "pk": 31,
+        "fields": {
+            "event": 9,
+            "image": "uploads/Doggo-1-24.jpg"
+        }
+    },
+    {
+        "model": "events.eventimage",
+        "pk": 32,
+        "fields": {
+            "event": 9,
+            "image": "uploads/Doggo-1-18.jpg"
+        }
+    },
+    {
+        "model": "events.eventimage",
+        "pk": 33,
+        "fields": {
+            "event": 9,
+            "image": "uploads/Doggo-1-17.jpg"
+        }
+    },
+    {
+        "model": "events.eventimage",
+        "pk": 34,
+        "fields": {
+            "event": 9,
+            "image": "uploads/Doggo-1-28.jpg"
+        }
+    },
+    {
+        "model": "events.eventimage",
+        "pk": 35,
+        "fields": {
+            "event": 9,
+            "image": "uploads/Doggo-1-12.jpg"
+        }
+    },
+    {
+        "model": "events.eventimage",
+        "pk": 36,
+        "fields": {
+            "event": 10,
+            "image": "uploads/AC.PNG"
+        }
+    },
+    {
+        "model": "events.eventimage",
+        "pk": 38,
+        "fields": {
+            "event": 8,
+            "image": "uploads/Harry_and_Jodi_Extra_5-2.jpg"
+        }
+    },
+    {
+        "model": "events.eventimage",
+        "pk": 39,
+        "fields": {
+            "event": 8,
+            "image": "uploads/Santa_Paws-0974.jpg"
+        }
+    },
+    {
+        "model": "events.eventimage",
+        "pk": 40,
+        "fields": {
+            "event": 8,
+            "image": "uploads/Santa_Paws-0605.jpg"
+        }
+    },
+    {
+        "model": "events.eventimage",
+        "pk": 41,
+        "fields": {
+            "event": 10,
+            "image": "uploads/carrie_waw.PNG"
+        }
+    },
+    {
+        "model": "events.eventimage",
+        "pk": 42,
+        "fields": {
+            "event": 10,
+            "image": "uploads/jamie.PNG"
+        }
+    },
+    {
+        "model": "resources.resource",
+        "pk": 1,
+        "fields": {
+            "name": "Hannah Unger, Irish Independent Op-Ed: Ireland is the puppy farm capital of Europe – these few simple changes could solve that",
+            "slug": "ireland-is-puppy-farm-capital",
+            "description": "On 18 December 2023, Hannah published an Op-Ed in the Irish Independent newspaper in relation to Ireland's dog crisis and suggested reforms to dog breeding.&nbsp;",
+            "tagline": "On 18 December 2023, Hannah published an Op-Ed in the Irish Independent newspaper in relation to Ireland's dog crisis and suggested reforms to dog breeding.",
+            "file": "Opinion__Ireland_doesnt_have_to_be_the_puppy_farm_capital_of_Europe___Irish_Legal_News.pdf",
+            "file_name": "",
+            "image": "uploads/Irish_indepdendent.PNG",
+            "URL": "https://www.independent.ie/opinion/comment/hannah-unger-ireland-is-the-puppy-farm-capital-of-europe-these-few-simple-changes-could-solve-that/a921229125.html",
+            "url_name": "Irish Independent Article - Click Here",
+            "uploaded_at": "2025-05-21T13:29:59.031Z"
+        }
+    },
+    {
+        "model": "resources.resource",
+        "pk": 2,
+        "fields": {
+            "name": "Fieldfisher LLP Report: Key Reforms to Dog Breeding in Ireland",
+            "slug": "Fieldfisher-Key-Reforms",
+            "description": "In May 2024, Hannah published a report titled: Key Reforms to Dog Breeding in Ireland, which she presented at Leinster House. The paper contains a roadmap for change when it comes to dog breeding in Ireland, including: strengthening laws governing dog breeding establishments and registered sellers, establishing an independent regulator to oversee enforcement and educate the public, improving microchipping and licensing systems, incentivising neutering, enhancing data collection to inform policy etc.",
+            "tagline": "In May 2024, Hannah published a report titled: Key Reforms to Dog Breeding in Ireland.",
+            "file": "Key_Reforms_to_Dog_Breeding_in_Ireland_srnqce.pdf",
+            "file_name": "",
+            "image": "uploads/fieldfisher_small_logo.png",
+            "URL": "https://www.fieldfisher.com/en-ie/locations/ireland/ireland-blog/key-reforms-to-dog-breeding-in-ireland",
+            "url_name": "Fieldfisher LLP Report - Click Here",
+            "uploaded_at": "2025-05-25T18:49:41.186Z"
+        }
+    },
+    {
+        "model": "resources.resource",
+        "pk": 3,
+        "fields": {
+            "name": "Hannah Unger gives interview with Jennifer Zamparelli on RTE 2FM",
+            "slug": "Jennifer-Zamparelli-interview",
+            "description": "On 24 February 2024, Hannah gave an interview on 2FM in relation to Ireland's dog crisis and suggested dog breeding reforms.&nbsp;",
+            "tagline": "On 24 February 2024, Hannah gave an interview on 2FM in relation to Ireland's dog crisis and suggested dog breeding reforms.",
+            "file": "",
+            "file_name": "",
+            "image": "uploads/Jen_Z.jpg",
+            "URL": "https://www.rte.ie/radio/2fm/clips/22359368/",
+            "url_name": "Radio Interview - Click Here",
+            "uploaded_at": "2025-05-25T20:09:34.967Z"
+        }
+    },
+    {
+        "model": "resources.resource",
+        "pk": 4,
+        "fields": {
+            "name": "Second Open Letter to the Minister for Rural and Community Development: Concerns re the Control of Dogs (XL Bully) Regulations 2024",
+            "slug": "Concerns-re-the-Control-of-Dogs",
+            "description": "On 12 February 2025, Dog Law Ireland wrote a second open letter to the Minister for Rural Community and Development in relation to the legal issues pertaining to S.I. No. 491/2024 - Control of Dogs (XL Bully) Regulations 2024.",
+            "tagline": "On 12 February 2025, Dog Law Ireland wrote a second open letter to the Minister for Rural Community and Development in relation to the legal issues pertaining to S.I. No. 491/2024 - Control of Dogs (XL Bully) Regulations 2024.",
+            "file": "Dog_Law_Ireland_Open_Letter_to_Minister_Calleary_-_12_February_2025_2.pdf",
+            "file_name": "",
+            "image": "uploads/DLI_logo.PNG",
+            "URL": "",
+            "url_name": "",
+            "uploaded_at": "2025-05-25T20:38:02.754Z"
+        }
+    },
+    {
+        "model": "resources.resource",
+        "pk": 5,
+        "fields": {
+            "name": "First Open Letter to the Minister for Rural and Community Development: Reconsideration of the XL Bully Type ban",
+            "slug": "reconsideration-of-the-XL-Bully-Type-ban",
+            "description": "In September 2024, Dog Law Ireland wrote their first open letter to the former Minister for Rural and Community Development to ask her to reconsider implementing the XL Bully Type ban by setting out alternatives which would greater enhance public safety.",
+            "tagline": "In September 2024, Dog Law Ireland wrote their first open letter to the former Minister for Rural and Community Development to ask her to reconsider implementing the XL Bully Type ban by setting out alternatives which would greater enhance public safety.",
+            "file": "Dog_Law_Ireland_Open_Letter_to_Minister_Heather_Humphreys_-_25_September_2024.pdf",
+            "file_name": "",
+            "image": "uploads/DLI_logo.PNG",
+            "URL": "",
+            "url_name": "",
+            "uploaded_at": "2025-05-25T20:41:12.701Z"
+        }
+    },
+    {
+        "model": "resources.resource",
+        "pk": 6,
+        "fields": {
+            "name": "Open Letter to the Minister for Agriculture: Surgical Artificial Insemination",
+            "slug": "concerns-re-artificial-insemination",
+            "description": "<p>The public consultation on whether to extend the prohibition on surgical artificial insemination - which currently applies to all other dogs - to include greyhounds, closed last July. To date, no update has been provided on when the results will be published or when any legislative changes might be introduced.\r\n</p><p>On 29 May 2025, the Advisory Council on Companion Animal Welfare launched its website. The minutes from their September 2024 meeting reveal that “the public consultation results indicate that surgical [artificial insemination] should be prohibited in all dogs, including greyhounds.”\r\n</p><p>\r\nDog Law Ireland is extremely disappointed that despite the results being available since last September - and clearly showing support for a full prohibition - no meaningful progress appears to have been made.\r\n\r\nThis is simply not good enough.\r\n</p><p>\r\nOn 30 May 2025, Dog Law Ireland wrote to the Minister for Agriculture, Martin Heydon, to express our disappointment and to offer our support in drafting legislation or assisting in any way needed to move this matter forward without further delay.<br></p>",
+            "tagline": "Dog Law Ireland wrote to the Minister for Agriculture to express our deep disappointment and to outline our willingness to assist in any way necessary to ensure the ban on surgical artificial insemination in greyhounds is enacted without further delay.",
+            "file": "DLI_Open_Letter_to_Minister_Heydon_-__Surgical_Artificial_Insemination_-_30_May_2025_1.pdf",
+            "file_name": "",
+            "image": "uploads/DLI_logo.PNG",
+            "URL": "",
+            "url_name": "",
+            "uploaded_at": "2025-06-02T18:14:47.874Z"
+        }
+    },
+    {
+        "model": "resources.resource",
+        "pk": 7,
+        "fields": {
+            "name": "The Pawsitive Pledge",
+            "slug": "Pawsitive-Pledge",
+            "description": "<p>Ahead of the 2024 general election, Dog Law Ireland launched their \"Pawsitive Pledge\" urging candidates to commit to meaningful reforms in dog welfare. </p><p>With dog pounds overwhelmed, euthanasia rates rising, and puppy farming rampant, the pledge highlights the urgent need for legislative and systemic change. Key proposals include strengthening dog breeding laws, regulating fertility clinics, improving microchipping and licensing systems, and establishing an independent regulator. The pledge also calls for a ban on greyhound racing, better funding for animal welfare organisations, and tougher penalties for animal cruelty. </p><p>Dog Law Ireland published a list of signatories before the general election commenced to assist voters in deciding who to vote for.</p>",
+            "tagline": "Ahead of the 2024 general election, Dog Law Ireland launched their \"Pawsitive Pledge\" urging candidates to commit to meaningful reforms in dog welfare.",
+            "file": "Dog_Law_Ireland_Pawsitive_Pledge_-_November_2024.pdf",
+            "file_name": "",
+            "image": "uploads/pldege.PNG",
+            "URL": "",
+            "url_name": "",
+            "uploaded_at": "2025-06-02T18:59:46.223Z"
+        }
+    },
+    {
+        "model": "resources.resource",
+        "pk": 8,
+        "fields": {
+            "name": "Dog Law Ireland meets with Senator Chris Andrews",
+            "slug": "DLI-meets-Chris-Andrews",
+            "description": "<p>On 27 February 2025, Dog law Ireland met with the wonderful Senator Chris Andrews to discuss dog welfare. </p><p>Chris is a huge advocate for dogs and we are so grateful to have such a strong, intelligent and passionate voice in our Senate. We can tell Chris really cares and wants to make a difference. </p><p>It was absolutely fantastic to hear about Chris’ plans for the next 5 year term to improve the lives of dogs in Ireland (eg drafting bills, setting up a specialised cross party dog welfare group, asking pertinent parliamentary questions, etc). </p><p>We are really looking forward to working with Chris over the next while and we will keep you updated on our progress.</p>",
+            "tagline": "On 27 February 2025, Dog law Ireland met with the wonderful Senator Chris Andrews to discuss dog welfare.",
+            "file": "",
+            "file_name": "",
+            "image": "uploads/chrs_A.PNG",
+            "URL": "",
+            "url_name": "",
+            "uploaded_at": "2025-06-02T19:23:40.155Z"
+        }
+    },
+    {
+        "model": "resources.resource",
+        "pk": 9,
+        "fields": {
+            "name": "Hannah Unger presents Fieldfisher LLP Paper 'Key Reforms to Dog Breeding in Ireland' in Leinster House.",
+            "slug": "Hannah-Unger-meets-Lynn-Boylan",
+            "description": "On 31 May 2024, Hannah Unger presented the Fieldfisher LLP paper 'Key Reforms to Dog Breeding in Ireland' in Leinster House. The event was organised by Lynn Boylan (TD, now MEP) and was well attended by other politicians and journalists. Hannah and her colleagues outlined the practical legislative and regulatory reforms to tackle unethical breeding practices, improve enforcement, and enhance animal welfare standards. Their efforts have significantly contributed to public awareness and policy discussions on dog breeding reform in Ireland.",
+            "tagline": "On 31 May 2024, Hannah Unger presented the Fieldfisher LLP paper 'Key Reforms to Dog Breeding in Ireland' in Leinster House. The event was organised by Lynn Boylan (TD, now MEP) and was well attended by other politicians and journalists.",
+            "file": "",
+            "file_name": "",
+            "image": "uploads/lynn.PNG",
+            "URL": "https://www.thesun.ie/news/13074781/dog-crisis-ireland-europe-puppy-farm-crime-politics/",
+            "url_name": "Irish Sun Article - Click Here",
+            "uploaded_at": "2025-06-02T19:29:26.610Z"
+        }
+    },
+    {
+        "model": "resources.resource",
+        "pk": 10,
+        "fields": {
+            "name": "XL Bully Judicial Review Struck Out After State Agrees to Amend Regulations",
+            "slug": "Judicial-Review",
+            "description": "<p>Dog Law Ireland was privileged to offer pro bono support to the legal team who took a successful judicial review against the XL Bully Regulations.</p><p>Whilst we do not agree that breed specific legislation will enhance public safety, if a ban is going to be implemented, it should at the very least be fair and contain adequate safeguards for owners and dogs.</p><p>We look forward to seeing what the amending regulations will contain and we hope that promises are kept in terms of addressing the issues that have been raised in the context of the judicial review.</p>",
+            "tagline": "Dog Law Ireland was privileged to offer pro bono support to the legal team who took a successful judicial review against the XL Bully Regulations.",
+            "file": "",
+            "file_name": "",
+            "image": "uploads/xl_bul.PNG",
+            "URL": "https://www.irishtimes.com/crime-law/courts/2025/02/27/xl-bully-case-taken-by-animal-welfare-charities-can-be-settled-high-court-told/",
+            "url_name": "Irish Times Article - Click Here",
+            "uploaded_at": "2025-06-02T19:47:55.997Z"
+        }
+    },
+    {
+        "model": "resources.resource",
+        "pk": 11,
+        "fields": {
+            "name": "Demi Mullen Presents at Causeway Coast Dog Rescue Conference",
+            "slug": "Causeway_Coast_Dog_Rescue_Conference",
+            "description": "On 2 October 2024, Demi presented at Causeway Coast Dog Rescue's Companion Animal Welfare Conference at Stormont in Belfast, giving an overview of dog law in Ireland.",
+            "tagline": "On 2 October 2024, Demi presented at Causeway Coast Dog Rescue's Companion Animal Welfare Conference at Stormont in Belfast, giving an overview of dog law in Ireland.",
+            "file": "",
+            "file_name": "",
+            "image": "uploads/459A9077.jpg",
+            "URL": "",
+            "url_name": "",
+            "uploaded_at": "2025-06-02T22:09:01.170Z"
+        }
+    },
+    {
+        "model": "resources.resource",
+        "pk": 12,
+        "fields": {
+            "name": "Demi Mullen Co-Presents at UK Centre for Animal Law Conference 2024",
+            "slug": "UK_Centre_For_Animal_Law_Conference",
+            "description": "On 29 May 2024, Demi co-presented with Rachel from Animal Law Ireland at the UK Centre for Animal Law's Conference in Birmingham City University, giving an overview of dog law in Ireland.",
+            "tagline": "On 29 May 2024, Demi co-presented with Rachel from Animal Law Ireland at the UK Centre for Animal Law's Conference in Birmingham City University, giving an overview of dog law in Ireland.",
+            "file": "",
+            "file_name": "",
+            "image": "uploads/ALAW-32.jpg",
+            "URL": "https://www.alaw.org.uk/animal-law-conference-2024/",
+            "url_name": "Read More About The Conference Here",
+            "uploaded_at": "2025-06-02T22:14:50.679Z"
+        }
+    },
+    {
+        "model": "resources.resource",
+        "pk": 15,
+        "fields": {
+            "name": "Hannah Unger interviewed by the Times in relation to puppy farming",
+            "slug": "hannah-unger-interviewed-by-the-times-in-relation",
+            "description": "<p><span style=\"color: rgb(0, 0, 0); font-family: &quot;American Typewriter&quot;;\">Hannah&nbsp;</span><span style=\"color: rgb(0, 0, 0); font-family: &quot;American Typewriter&quot;;\">was delighted to be able to contribute to an incredible piece of journalism authored by John Mooney&nbsp;</span><span style=\"color: rgb(0, 0, 0); font-family: &quot;American Typewriter&quot;;\">for the Times in June 2025.&nbsp;</span><span style=\"color: rgb(0, 0, 0); font-family: &quot;American Typewriter&quot;;\">John discusses how Ireland became the puppy farm capital of Europe - and the scale is staggering. There are also some great insights from Caroline Faherty (ISPCA inspector) a</span><span style=\"color: rgb(0, 0, 0); font-family: &quot;American Typewriter&quot;;\">nd Suzi Carley (CEO of Dogs Trust).&nbsp;</span></p>",
+            "tagline": "Hannah was delighted to be able to contribute to an incredible piece of journalism authored by John Mooney for the Times in June 2025. John discusses how Ireland became the puppy farm capital of Europe - and the scale is staggering.",
+            "file": "",
+            "file_name": "",
+            "image": "uploads/JM_1.jpg",
+            "URL": "https://www.thetimes.com/world/ireland-world/article/puppy-farm-ireland-breeding-capital-lw69wcvnz",
+            "url_name": "The Times Article - Click Here",
+            "uploaded_at": "2025-06-09T07:23:26.966Z"
+        }
+    },
+    {
+        "model": "resources.resource",
+        "pk": 16,
+        "fields": {
+            "name": "Dog Law Ireland featured as the cover story for the Law Society Gazette",
+            "slug": "dog-law-ireland-featured-as-the-cover-story-for-th",
+            "description": "<p><span style=\"color: rgb(0, 0, 0); font-family: &quot;American Typewriter&quot;;\">Dog Law Ireland was absolutely delighted to be featured as the cover story for the Law Society of Ireland G</span><span style=\"color: rgb(0, 0, 0); font-family: &quot;American Typewriter&quot;;\">azette June 2025 Edition. The article highlights the work we at Dog Law Ireland&nbsp;</span><span style=\"color: rgb(0, 0, 0); font-family: &quot;American Typewriter&quot;;\">have completed since forming almost a year ago and our plans for the future. The publication is timely as European Pro Bono week is starting on 09 June 2025.&nbsp;</span></p>",
+            "tagline": "Dog Law Ireland was absolutely delighted to be featured as the cover story for the Law Society of Ireland Gazette June 2025 Edition.",
+            "file": "",
+            "file_name": "",
+            "image": "uploads/IMG_9796.jpg",
+            "URL": "https://www.lawsociety.ie/globalassets/documents/gazette/gazette-pdfs/gazette-2025/june-2025-gazette.pdf",
+            "url_name": "Law Society Gazette - Click Here",
+            "uploaded_at": "2025-06-09T07:26:47.752Z"
+        }
+    },
+    {
+        "model": "resources.resource",
+        "pk": 17,
+        "fields": {
+            "name": "Demi Mullen Co-Presents at the UK Centre For Animal Law Conference 2025",
+            "slug": "demi-mullen-co-presents-at-the-uk-centre-for-anima",
+            "description": "<p>On 4 June 2025, Demi co-presented with Rachel from Animal Law Ireland at the UK Centre for Animal Law's Conference in Birmingham City University, giving an overview of the issues with pet rental policies in Ireland.<br></p>",
+            "tagline": "On 4 June 2025, Demi co-presented with Rachel from Animal Law Ireland at the UK Centre for Animal Law's Conference in Birmingham City University, giving an overview of the issues with pet rental policies in Ireland.",
+            "file": "",
+            "file_name": "",
+            "image": "uploads/PHOTO-2025-06-07-23-40-29.jpg",
+            "URL": "https://www.alaw.org.uk/animal-law-conference/",
+            "url_name": "Read More About The Conference Here",
+            "uploaded_at": "2025-06-15T12:00:12.694Z"
+        }
+    }
+]

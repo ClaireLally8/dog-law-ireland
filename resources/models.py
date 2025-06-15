@@ -9,7 +9,7 @@ class Resource(models.Model):
     tagline = models.TextField(blank=True, null=True)
     file = models.FileField(blank=True, null=True)
     file_name = models.CharField(max_length=50, blank=True)
-    rimage = models.ImageField(upload_to='uploads/',blank=True, null=True)
+    image = models.ImageField(upload_to='uploads/',blank=True, null=True)
     URL = models.URLField(blank=True)
     url_name = models.CharField(max_length=50, blank=True)
     uploaded_at = models.DateTimeField(auto_now_add=True)
@@ -37,18 +37,18 @@ class Resource(models.Model):
         return self.name
 
 class ResourceLink(models.Model):
-    resource = models.ForeignKey(Resource, on_delete=models.CASCADE, related_name='links')
-    url = models.URLField()
-    name = models.CharField(max_length=100)
+    resource = models.ForeignKey(Resource, on_delete=models.CASCADE, related_name='links', null=True, blank=True)
+    url = models.URLField(null=True, blank=True)
+    name = models.CharField(max_length=100, null=True, blank=True)
 
     def __str__(self):
         return f"{self.name} ({self.url})"
 
 class ResourceImage(models.Model):
     resource = models.ForeignKey(Resource, on_delete=models.CASCADE, related_name='images')
-    image = models.ImageField(upload_to='uploads/')
-    is_banner = models.BooleanField(default=False)
-    is_thumbnail = models.BooleanField(default=False)
+    image = models.ImageField(upload_to='uploads/', null=True, blank=True)
+    is_banner = models.BooleanField(default=False, null=True, blank=True)
+    is_thumbnail = models.BooleanField(default=False, null=True, blank=True)
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
