@@ -35,3 +35,7 @@ class Resource(models.Model):
         super().save(*args, **kwargs)   
     def __str__(self):
         return self.name
+
+class ResourceImage(models.Model):
+    Resource = models.ForeignKey(Resource, related_name='images', on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='uploads/')
