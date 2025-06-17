@@ -33,6 +33,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['doglawireland.ie', 'www.doglawireland.ie']
 CSRF_TRUSTED_ORIGINS = ['https://doglawireland.ie']
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+USE_X_FORWARDED_HOST = True
 
 
 
