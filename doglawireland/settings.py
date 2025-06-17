@@ -29,9 +29,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
+USE_SERVER_SIDE_CURSORS = False
 
-ALLOWED_HOSTS = ['doglawireland.ie', 'www.doglawireland.ie']
+ALLOWED_HOSTS = ['doglawireland.ie', 'www.doglawireland.ie', '*']
 CSRF_TRUSTED_ORIGINS = ['https://doglawireland.ie']
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 USE_X_FORWARDED_HOST = True
