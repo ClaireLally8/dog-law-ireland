@@ -31,8 +31,9 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = ['https://www.doglawireland.ie/']
+ALLOWED_HOSTS = ['doglawireland.ie', 'www.doglawireland.ie']
+CSRF_TRUSTED_ORIGINS = ['https://doglawireland.ie']
+
 
 
 # Application definition
