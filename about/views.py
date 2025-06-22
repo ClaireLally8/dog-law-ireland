@@ -5,9 +5,11 @@ from resources.models import Resource
 # Create your views here.
 def about(request):
     about = About.objects.all()
-    xlreview = Resource.objects.get(slug='Judicial-Review')
+    xlreview = Resource.objects.filter(slug='Judicial-Review').first()
+
     context = {
-        'about':about,
+        'about': about,
         'xlreview': xlreview,
     }
-    return render(request,'about/about.html', context)
+    return render(request, 'about/about.html', context)
+

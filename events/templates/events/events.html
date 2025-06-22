@@ -3,7 +3,8 @@
 {% load pagination_tags %}
 
 {% block content %}
-<h1 class="my-5">Fundraising Events</h1>
+<h1 class="my-5 display-5">Fundraising Events</h1>
+{% if featured %}
 <div class="container my-5 py-5">
   <div class="row align-items-center">
     <!-- Left Side: Event Info -->
@@ -16,7 +17,9 @@
         <p class="mb-3"><i class="bi bi-pin-map-fill me-2"></i>{{ featured.event_location }}</p>
       {% endif %}
       <p>{{ featured.description|safe }}</p>
+      {% if featured.slug %}
       <a href="{% url 'event_detail' featured.slug %}" class="btn btn-outline-secondary mt-2">Read more →</a>
+      {% endif %}
       {% if featured.URL %}
         <a href="{{ featured.URL }}" target="_blank" class="btn btn-primary mt-2 ms-2">
           {% if featured.url_name %}{{ featured.url_name }}{% else %}Find out more{% endif %}
@@ -38,10 +41,12 @@
 </div>
 
 <div class="container">
-  <h1 class="my-5">Other Events</h1>
+  <h1 class="my-5 display-5">Other Events</h1>
+  {% endif %}
   <div class="row">
     {% for r in events %}
     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 my-5 px-1 d-flex justify-content-center">
+      {% if r.slug %}
       <a href="{% url 'event_detail' r.slug %}" class="card-link-wrapper text-decoration-none">
         <div class="card" style="max-width: 18rem;">
           {% if r.images.all %} 
@@ -71,6 +76,7 @@
           </div>
         </div>
       </a>
+      {% endif %}
     </div>
     
     {% endfor %}

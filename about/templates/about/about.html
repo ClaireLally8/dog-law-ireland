@@ -3,8 +3,8 @@
 
 {% block content %}
   <div class="container my-5">
-    <h1 class="display-4 fw-bold">About Us</h1>
-    <p class="lead">Founded in August 2024 by solicitors Hannah Unger, Carrie McMeel and Demi Mullen, Dog Law Ireland (DLÍ) is dedicated to making dog law accessible and understood by all.</p>
+    <h1 class="display-5">About Us</h1>
+    <p class="">Founded in August 2024 by solicitors Hannah Unger, Carrie McMeel and Demi Mullen, Dog Law Ireland (DLÍ) is dedicated to making dog law accessible and understood by all.</p>
   </div>
 <div class="container d-flex justify-content-center my-5">
   <div class="row">
@@ -36,6 +36,7 @@
 <div class="container my-5">
   <h2 class="text-center mb-5">Meet the DLI Team</h2>
   <div class="row justify-content-center">
+    {% if about %}
     {% for p in about %}
     <div class="col-md-6 col-lg-4 mb-4 d-flex align-items-stretch">
       <div class="card shadow-sm border-0 px-3 py-4 text-center">
@@ -45,12 +46,14 @@
       </div>
     </div>
     {% endfor %}
+    {% endif %}
   </div>
 </div>
 
 <!-- Accomplishment Highlight -->
 <div class="container">
   <h2 class="text-center my-5">Our Accomplishments</h2>
+  {% if xlreview %}
   <div class="row align-items-center">
     <div class="col-lg-4 col-md-4 offset-md-1 col-sm-12 mb-4">
       <img src="{{ xlreview.image.url }}" class="img-fluid rounded shadow" alt="XL Bully case image">
@@ -66,6 +69,7 @@
       {% endif %}
     </div>
   </div>
+  {% endif %}
 </div>
 
 <!-- Accomplishments Icons -->
