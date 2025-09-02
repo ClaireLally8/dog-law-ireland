@@ -4,16 +4,20 @@ from django.core.exceptions import ValidationError
 import os
 
 
-
 class Event(models.Model):
     name = models.CharField(max_length=255)
     slug = models.SlugField(unique=True, blank=True)
     tagline = models.TextField(blank=True, null=True)
     description = models.TextField(blank=True, null=True)
-    uploaded_at = models.DateTimeField(auto_now_add=True)
     featured = models.BooleanField(default=False)
     URL = models.URLField(blank=True)
     url_name = models.CharField(max_length=50, blank=True)
+    order = models.IntegerField(default=0, db_index=True)
+    uploaded_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        # Featured first → manual order (lower = higher) → newest first fallback
+        ordering = ("-featured", "order", "-uploaded_at")
 
     def save(self, *args, **kwargs):
         if not self.slug:

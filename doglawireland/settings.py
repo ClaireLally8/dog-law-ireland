@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'storages',
 
     'django_summernote',
+    "adminsortable2",
  
     'main',
     'about',

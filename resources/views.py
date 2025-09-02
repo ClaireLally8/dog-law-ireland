@@ -3,7 +3,11 @@ from django.core.paginator import Paginator
 from .models import Resource
 
 def resources(request):
-    resources_qs = Resource.objects.all().order_by('-uploaded_at')
+    resources_qs = (
+        Resource.objects
+        .order_by("position", "-uploaded_at")  # explicit & stable
+        .prefetch_related("images")
+    )
     paginator = Paginator(resources_qs, 12)
     page_number = request.GET.get('page') or 1
     page_obj = paginator.get_page(page_number)

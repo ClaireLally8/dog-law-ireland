@@ -12,16 +12,21 @@ class Resource(models.Model):
     image = models.ImageField(upload_to='uploads/',blank=True, null=True)
     URL = models.URLField(blank=True)
     url_name = models.CharField(max_length=50, blank=True)
+    position = models.IntegerField(default=0, db_index=True)
     uploaded_at = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        # Featured first → manual order (lower = higher) → newest first fallback
+        ordering = ("position", "-uploaded_at")
+
     def clean(self):
-        # Require at least one upload (optional, remove if not needed)
-        if not self.file and not self.image:
-            raise ValidationError('Please upload at least an image or a file.')
-        # Validate file is PDF if a file is uploaded
-        if self.file:
-            if not self.file.name.lower().endswith('.pdf'):
-                raise ValidationError('Uploaded file must be a PDF.')
+    # only enforce if it's a new instance or file is updated
+        if not self.pk and not self.file and not self.image and not self.URL:
+            raise ValidationError("Please upload at least an image, file, or provide a URL.")
+
+        if self.file and not self.file.name.lower().endswith(".pdf"):
+            raise ValidationError("Uploaded file must be a PDF.")
+
     
     def save(self, *args, **kwargs):
         if not self.slug:
